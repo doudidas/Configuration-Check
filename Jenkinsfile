@@ -11,7 +11,6 @@ pipeline ***REMOVED***
         stage('Get vRA-Content') ***REMOVED***
           steps ***REMOVED***
             sh 'pwsh contents.ps1'
-            archiveArtifacts 'package/content.json'
           ***REMOVED***
         ***REMOVED***
         stage('Get BusinessGroups') ***REMOVED***
@@ -38,8 +37,7 @@ pipeline ***REMOVED***
     ***REMOVED***
     stage('show files') ***REMOVED***
       steps ***REMOVED***
-        sh '''#!/usr/bin/bash
-cat package/*'''
+        archiveArtifacts 'package/*'
       ***REMOVED***
     ***REMOVED***
   ***REMOVED***
