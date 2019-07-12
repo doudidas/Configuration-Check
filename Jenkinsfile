@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Get Elements') {
       steps {
-        sh 'ls'
+        sh 'pwsh script.ps1'
       }
     }
   }
