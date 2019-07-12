@@ -42,8 +42,8 @@ reservations.ps1'''
     ***REMOVED***
     stage('show files') ***REMOVED***
       steps ***REMOVED***
-        sh '''#!/usr/bin/pwsh
-Get-ChildItem ./package | Get-Content -raw | ConvertFrom-Json'''
+        sh '''#!/usr/bin/bash
+cat package/*'''
       ***REMOVED***
     ***REMOVED***
   ***REMOVED***
