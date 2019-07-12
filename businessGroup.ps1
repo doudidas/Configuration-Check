@@ -12,4 +12,4 @@ $cred = New-Object System.Management.Automation.PSCredential ($username, $secpas
 #connect to the source vRA instance
 Connect-vRAServer -Server $sourceVra -Tenant $tenant -Credential $cred  -IgnoreCertRequirements
 
-Get-vRABusinessGroup | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File $path/businessGroups.json
+Get-vRABusinessGroup | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File package/businessGroups.json
