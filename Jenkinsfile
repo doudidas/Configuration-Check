@@ -19,25 +19,25 @@ Get-vRAContent | Select-Object -Property * -ExcludeProperty Id, DateCreated, Cre
         stage('Get BusinessGroups') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-./businessGroup.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'''
+./businessGroup.ps1'''
           ***REMOVED***
         ***REMOVED***
         stage('Get blueprints') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-./blueprint.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'''
+./blueprint.ps1'''
           ***REMOVED***
         ***REMOVED***
         stage('Get Entitlements') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-Get-vRAEntitlement | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File package/entitlements.json'''
+entitlements.ps1'''
           ***REMOVED***
         ***REMOVED***
         stage('get Reservation') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-Get-vRAReservation| Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File package/reservations.json'''
+reservations.ps1'''
           ***REMOVED***
         ***REMOVED***
       ***REMOVED***
