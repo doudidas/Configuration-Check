@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('check') {
       steps {
-        sh 'pwsh Get-InstalledModule'
+        sh '''#!usr/bin/pwsh 
+Get-InstalledModule'''
       }
     }
     stage('Run script') {
