@@ -1,9 +1,11 @@
 pipeline ***REMOVED***
   agent any
   stages ***REMOVED***
-    stage('Prepare') ***REMOVED***
+    stage('Get conf') ***REMOVED***
       steps ***REMOVED***
-        sh 'pwsh ./init.ps1'
+        sh '''git clone https://github.com/doudidas/configurations.git
+cd configurations
+git checkout dev'''
       ***REMOVED***
     ***REMOVED***
     stage('Get vRA conf') ***REMOVED***
@@ -38,6 +40,16 @@ pipeline ***REMOVED***
     stage('Archive files') ***REMOVED***
       steps ***REMOVED***
         archiveArtifacts 'package/*'
+      ***REMOVED***
+    ***REMOVED***
+    stage('Move configuration files') ***REMOVED***
+      steps ***REMOVED***
+        sh 'mv package/* configurations'
+      ***REMOVED***
+    ***REMOVED***
+    stage('Git Diff') ***REMOVED***
+      steps ***REMOVED***
+        sh 'git diff '
       ***REMOVED***
     ***REMOVED***
   ***REMOVED***
