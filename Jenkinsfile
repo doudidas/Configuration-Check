@@ -17,13 +17,13 @@ contents.ps1'''
         stage('Get BusinessGroups') {
           steps {
             sh '''#!/usr/bin/pwsh
-./businessGroup.ps1'''
+businessGroup.ps1'''
           }
         }
         stage('Get blueprints') {
           steps {
             sh '''#!/usr/bin/pwsh
-./blueprint.ps1'''
+blueprint.ps1'''
           }
         }
         stage('Get Entitlements') {
