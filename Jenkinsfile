@@ -17,13 +17,13 @@ contents.ps1'''
         stage('Get BusinessGroups') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-./businessGroup.ps1'''
+businessGroup.ps1'''
           ***REMOVED***
         ***REMOVED***
         stage('Get blueprints') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-./blueprint.ps1'''
+blueprint.ps1'''
           ***REMOVED***
         ***REMOVED***
         stage('Get Entitlements') ***REMOVED***
