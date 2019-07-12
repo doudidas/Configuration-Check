@@ -1,13 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Get conf') {
-      steps {
-        sh '''git clone git@github.com:doudidas/configurations.git
-cd configurations
-git checkout dev'''
-      }
-    }
     stage('Get vRA conf') {
       parallel {
         stage('Get vRA-Content') {
@@ -44,9 +37,7 @@ git checkout dev'''
     }
     stage('Git Diff') {
       steps {
-        sh '''cd configurations
-git master
-git diff'''
+        sh 'git diff master'
       }
     }
   }
