@@ -1,24 +1,24 @@
 pipeline {
   agent any
   stages {
-    stage('Create package folder') {
+    stage('Prepare') {
       steps {
         sh 'pwsh ./init.ps1'
       }
     }
-    stage('Get vRA-Content') {
+    stage('Get vRA conf') {
       parallel {
         stage('Get vRA-Content') {
           steps {
             sh 'pwsh contents.ps1'
           }
         }
-        stage('Get BusinessGroups') {
+        stage('Get Business Groups') {
           steps {
             sh 'pwsh businessGroup.ps1'
           }
         }
-        stage('Get blueprints') {
+        stage('Get Blueprints') {
           steps {
             sh 'pwsh blueprint.ps1'
           }
@@ -28,14 +28,14 @@ pipeline {
             sh 'pwsh entitlements.ps1'
           }
         }
-        stage('get Reservation') {
+        stage('get Reservations') {
           steps {
             sh 'pwsh reservations.ps1'
           }
         }
       }
     }
-    stage('show files') {
+    stage('Archive files') {
       steps {
         archiveArtifacts 'package/*'
       }
