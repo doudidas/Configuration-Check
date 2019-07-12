@@ -30,16 +30,14 @@ pipeline ***REMOVED***
         ***REMOVED***
       ***REMOVED***
     ***REMOVED***
-    stage('Archive files') ***REMOVED***
-      steps ***REMOVED***
-        archiveArtifacts 'configurations/*'
-      ***REMOVED***
-    ***REMOVED***
     stage('Git Diff') ***REMOVED***
       steps ***REMOVED***
-        sh '''cd configurations
-git master
-git diff'''
+        sh 'git diff master > configurations/diff.txt'
+      ***REMOVED***
+    ***REMOVED***
+    stage('Archive files') ***REMOVED***
+      steps ***REMOVED***
+        archiveArtifacts 'configurations/* '
       ***REMOVED***
     ***REMOVED***
   ***REMOVED***
