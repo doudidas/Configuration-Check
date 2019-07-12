@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('check') {
       steps {
-        sh '''#!usr/bin/pwsh 
-Get-InstalledModule'''
+        sh 'whoami'
       }
     }
     stage('Run script') {
