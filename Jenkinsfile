@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('log') {
       steps {
-        sh 'ls -R'
+        sh 'ls -aR'
       }
     }
     stage('Get vRA conf') {
