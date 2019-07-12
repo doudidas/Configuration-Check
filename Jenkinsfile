@@ -12,44 +12,41 @@ git checkout dev'''
       parallel ***REMOVED***
         stage('Get vRA-Content') ***REMOVED***
           steps ***REMOVED***
-            sh 'pwsh contents.ps1'
+            sh 'pwsh getContents.ps1 source'
           ***REMOVED***
         ***REMOVED***
         stage('Get Business Groups') ***REMOVED***
           steps ***REMOVED***
-            sh 'pwsh businessGroup.ps1'
+            sh 'pwsh getBusinessGroups.ps1 source'
           ***REMOVED***
         ***REMOVED***
         stage('Get Blueprints') ***REMOVED***
           steps ***REMOVED***
-            sh 'pwsh blueprint.ps1'
+            sh 'pwsh getBlueprints.ps1 source'
           ***REMOVED***
         ***REMOVED***
         stage('Get Entitlements') ***REMOVED***
           steps ***REMOVED***
-            sh 'pwsh entitlements.ps1'
+            sh 'pwsh getEntitlements.ps1 source'
           ***REMOVED***
         ***REMOVED***
         stage('get Reservations') ***REMOVED***
           steps ***REMOVED***
-            sh 'pwsh reservations.ps1'
+            sh 'pwsh getReservations.ps1 source'
           ***REMOVED***
         ***REMOVED***
       ***REMOVED***
     ***REMOVED***
     stage('Archive files') ***REMOVED***
       steps ***REMOVED***
-        archiveArtifacts 'package/*'
-      ***REMOVED***
-    ***REMOVED***
-    stage('Move configuration files') ***REMOVED***
-      steps ***REMOVED***
-        sh 'mv package/* configurations'
+        archiveArtifacts 'configurations/*'
       ***REMOVED***
     ***REMOVED***
     stage('Git Diff') ***REMOVED***
       steps ***REMOVED***
-        sh 'git diff '
+        sh '''cd configurations
+git master
+git diff'''
       ***REMOVED***
     ***REMOVED***
   ***REMOVED***
