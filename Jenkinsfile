@@ -3,7 +3,7 @@ pipeline ***REMOVED***
   stages ***REMOVED***
     stage('log') ***REMOVED***
       steps ***REMOVED***
-        sh 'ls -R'
+        sh 'ls -aR'
       ***REMOVED***
     ***REMOVED***
     stage('Get vRA conf') ***REMOVED***
