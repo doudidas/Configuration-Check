@@ -32,7 +32,10 @@ pipeline ***REMOVED***
     ***REMOVED***
     stage('Git Diff') ***REMOVED***
       steps ***REMOVED***
-        sh '''cd configurations
+        sh '''
+cd configurations
+git branch
+git status
 git diff master > diff'''
       ***REMOVED***
     ***REMOVED***
