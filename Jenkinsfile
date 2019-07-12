@@ -11,7 +11,6 @@ pipeline {
         stage('Get vRA-Content') {
           steps {
             sh 'pwsh contents.ps1'
-            archiveArtifacts 'package/content.json'
           }
         }
         stage('Get BusinessGroups') {
@@ -38,8 +37,7 @@ pipeline {
     }
     stage('show files') {
       steps {
-        sh '''#!/usr/bin/bash
-cat package/*'''
+        archiveArtifacts 'package/*'
       }
     }
   }
