@@ -1,13 +1,6 @@
 pipeline ***REMOVED***
   agent any
   stages ***REMOVED***
-    stage('Get conf') ***REMOVED***
-      steps ***REMOVED***
-        sh '''git clone git@github.com:doudidas/configurations.git
-cd configurations
-git checkout dev'''
-      ***REMOVED***
-    ***REMOVED***
     stage('Get vRA conf') ***REMOVED***
       parallel ***REMOVED***
         stage('Get vRA-Content') ***REMOVED***
