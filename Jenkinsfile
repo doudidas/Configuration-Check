@@ -11,33 +11,33 @@ pipeline ***REMOVED***
         stage('Get vRA-Content') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-Get-vRAContent | Select-Object -Property * -ExcludeProperty Id, DateCreated, CreatedDate, LastUpdated | ConvertTo-Json | Out-File $path/contents.json
+Get-vRAContent | Select-Object -Property * -ExcludeProperty Id, DateCreated, CreatedDate, LastUpdated | ConvertTo-Json | Out-File package/contents.json
 '''
           ***REMOVED***
         ***REMOVED***
         stage('Get BusinessGroups') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-Get-vRABusinessGroup | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File $path/businessGroups.json
+Get-vRABusinessGroup | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File package/businessGroups.json
 '''
           ***REMOVED***
         ***REMOVED***
         stage('Get blueprints') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-Get-vRABlueprint | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File $path/blueprints.json'''
+Get-vRABlueprint | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File package/blueprints.json'''
           ***REMOVED***
         ***REMOVED***
         stage('Get Entitlements') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-Get-vRAEntitlement | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File $path/entitlements.json'''
+Get-vRAEntitlement | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File package/entitlements.json'''
           ***REMOVED***
         ***REMOVED***
         stage('get Reservation') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-Get-vRAReservation| Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File $path/reservations.json'''
+Get-vRAReservation| Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File package/reservations.json'''
           ***REMOVED***
         ***REMOVED***
       ***REMOVED***
