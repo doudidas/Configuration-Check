@@ -3,8 +3,7 @@ pipeline ***REMOVED***
   stages ***REMOVED***
     stage('Init Connexion') ***REMOVED***
       steps ***REMOVED***
-        sh '''#!usr/bin/pwsh
-pwsh init.ps1'''
+        sh 'pwsh init.ps1'
       ***REMOVED***
     ***REMOVED***
     stage('Get vRA-Content') ***REMOVED***
