@@ -5,10 +5,11 @@ pipeline {
       parallel {
         stage('Get Elements') {
           steps {
-            sh 'pwsh -NonInteractive -ExecutionPolicy ByPass script.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'
+            sh '''#! /usr/bin/pwsh
+script.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'''
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             sh 'ps -p $$'
           }
