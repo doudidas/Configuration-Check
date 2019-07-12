@@ -1,9 +1,15 @@
 pipeline ***REMOVED***
   agent any
   stages ***REMOVED***
-    stage('Get Elements') ***REMOVED***
+    stage('check') ***REMOVED***
       steps ***REMOVED***
-        sh 'pwsh -NonInteractive -ExecutionPolicy ByPass script.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'
+        sh 'whoami'
+      ***REMOVED***
+    ***REMOVED***
+    stage('Run script') ***REMOVED***
+      steps ***REMOVED***
+        sh '''#!/usr/bin/pwsh
+./script.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'''
       ***REMOVED***
     ***REMOVED***
   ***REMOVED***
