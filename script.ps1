@@ -2,6 +2,8 @@ param(
 [string]$sourceVra,$tenant, $username, $password
 )
 
+Import-Module -Name PowervRA
+
 # Init credantials
 $secpasswd = ConvertTo-SecureString $password -AsPlainText -Force
 $cred = New-Object System.Management.Automation.PSCredential ($username, $secpasswd)
