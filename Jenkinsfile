@@ -5,7 +5,7 @@ pipeline ***REMOVED***
       parallel ***REMOVED***
         stage('Get Elements') ***REMOVED***
           steps ***REMOVED***
-            sh '''#! /usr/bin/pwsh
+            sh '''#!/usr/bin/pwsh
 ./script.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'''
           ***REMOVED***
         ***REMOVED***
