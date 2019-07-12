@@ -32,7 +32,8 @@ pipeline ***REMOVED***
     ***REMOVED***
     stage('Git Diff') ***REMOVED***
       steps ***REMOVED***
-        sh 'git checkout master'
+        sh '''cd configurations
+git diff master > diff'''
       ***REMOVED***
     ***REMOVED***
     stage('Archive files') ***REMOVED***
