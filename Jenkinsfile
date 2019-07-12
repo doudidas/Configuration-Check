@@ -3,7 +3,8 @@ pipeline ***REMOVED***
   stages ***REMOVED***
     stage('check') ***REMOVED***
       steps ***REMOVED***
-        sh 'pwsh Get-InstalledModule'
+        sh '''#!usr/bin/pwsh 
+Get-InstalledModule'''
       ***REMOVED***
     ***REMOVED***
     stage('Run script') ***REMOVED***
