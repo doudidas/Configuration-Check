@@ -1,6 +1,11 @@
 pipeline ***REMOVED***
   agent any
   stages ***REMOVED***
+    stage('log') ***REMOVED***
+      steps ***REMOVED***
+        sh 'ls -R'
+      ***REMOVED***
+    ***REMOVED***
     stage('Get vRA conf') ***REMOVED***
       parallel ***REMOVED***
         stage('Get vRA-Content') ***REMOVED***
