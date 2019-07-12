@@ -1,9 +1,9 @@
 pipeline ***REMOVED***
   agent any
   stages ***REMOVED***
-    stage('') ***REMOVED***
+    stage('Get Elements') ***REMOVED***
       steps ***REMOVED***
-        sh 'ls'
+        sh 'pwsh script.ps1'
       ***REMOVED***
     ***REMOVED***
   ***REMOVED***
