@@ -1,19 +1,17 @@
 pipeline ***REMOVED***
   agent any
   stages ***REMOVED***
-    stage('Init Connexion') ***REMOVED***
+    stage('Create package folder') ***REMOVED***
       steps ***REMOVED***
-        sh 'pwsh ./init.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'
+        sh 'pwsh ./init.ps1'
       ***REMOVED***
     ***REMOVED***
     stage('Get vRA-Content') ***REMOVED***
       parallel ***REMOVED***
         stage('Get vRA-Content') ***REMOVED***
           steps ***REMOVED***
-            sh 'pwsh ./init.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'
             sh '''#!/usr/bin/pwsh
-Get-vRAContent | Select-Object -Property * -ExcludeProperty Id, DateCreated, CreatedDate, LastUpdated | ConvertTo-Json | Out-File package/contents.json
-'''
+contents.ps1'''
           ***REMOVED***
         ***REMOVED***
         stage('Get BusinessGroups') ***REMOVED***
