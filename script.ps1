@@ -1,7 +1,6 @@
-$sourceVra = "cava-n-80-154.eng.vmware.com"
-$tenant = "vsphere.local"
-$username = "etopin@vsphere.local"
-$password = "VMware1!"
+param(
+[string]$sourceVra,$tenant, $username, $password
+)
 
 # Init credantials
 $secpasswd = ConvertTo-SecureString $password -AsPlainText -Force
