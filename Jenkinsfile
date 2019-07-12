@@ -4,7 +4,7 @@ pipeline {
     stage('Init Connexion') {
       steps {
         sh '''#!usr/bin/pwsh
-init.ps1'''
+pwsh init.ps1'''
       }
     }
     stage('Get vRA-Content') {
