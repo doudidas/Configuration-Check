@@ -32,7 +32,8 @@ pipeline {
     }
     stage('Git Diff') {
       steps {
-        sh 'git checkout master'
+        sh '''cd configurations
+git diff master > diff'''
       }
     }
     stage('Archive files') {
