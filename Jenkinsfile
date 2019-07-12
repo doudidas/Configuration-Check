@@ -19,13 +19,13 @@ Get-vRAContent | Select-Object -Property * -ExcludeProperty Id, DateCreated, Cre
         stage('Get BusinessGroups') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-./businessGroup.ps1'''
+./businessGroup.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'''
           ***REMOVED***
         ***REMOVED***
         stage('Get blueprints') ***REMOVED***
           steps ***REMOVED***
             sh '''#!/usr/bin/pwsh
-./blueprint.ps1'''
+./blueprint.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'''
           ***REMOVED***
         ***REMOVED***
         stage('Get Entitlements') ***REMOVED***
