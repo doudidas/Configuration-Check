@@ -3,7 +3,7 @@ pipeline ***REMOVED***
   stages ***REMOVED***
     stage('Get conf') ***REMOVED***
       steps ***REMOVED***
-        sh '''git clone https://github.com/doudidas/configurations.git
+        sh '''git clone git@github.com:doudidas/configurations.git
 cd configurations
 git checkout dev'''
       ***REMOVED***
