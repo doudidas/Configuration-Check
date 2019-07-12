@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage('log') {
+      steps {
+        sh 'ls -R'
+      }
+    }
     stage('Get vRA conf') {
       parallel {
         stage('Get vRA-Content') {
