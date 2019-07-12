@@ -42,7 +42,7 @@ reservations.ps1'''
     }
     stage('show files') {
       steps {
-        sh '''#!usr/bin/pwsh
+        sh '''#!/usr/bin/pwsh
 Get-ChildItem ./package | Get-Content -raw | ConvertFrom-Json'''
       }
     }
