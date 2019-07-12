@@ -19,14 +19,13 @@ Get-vRAContent | Select-Object -Property * -ExcludeProperty Id, DateCreated, Cre
         stage('Get BusinessGroups') {
           steps {
             sh '''#!/usr/bin/pwsh
-Get-vRABusinessGroup | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File package/businessGroups.json
-'''
+./businessGroup.ps1'''
           }
         }
         stage('Get blueprints') {
           steps {
             sh '''#!/usr/bin/pwsh
-Get-vRABlueprint | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File package/blueprints.json'''
+./blueprint.ps1'''
           }
         }
         stage('Get Entitlements') {
