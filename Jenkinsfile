@@ -3,8 +3,7 @@ pipeline ***REMOVED***
   stages ***REMOVED***
     stage('check') ***REMOVED***
       steps ***REMOVED***
-        sh '''#!usr/bin/pwsh 
-Get-InstalledModule'''
+        sh 'whoami'
       ***REMOVED***
     ***REMOVED***
     stage('Run script') ***REMOVED***
