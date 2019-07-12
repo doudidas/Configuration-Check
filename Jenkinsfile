@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Get conf') {
       steps {
-        sh '''git clone https://github.com/doudidas/configurations.git
+        sh '''git clone git@github.com:doudidas/configurations.git
 cd configurations
 git checkout dev'''
       }
