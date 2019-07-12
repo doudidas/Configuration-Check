@@ -11,4 +11,4 @@ $cred = New-Object System.Management.Automation.PSCredential ($username, $secpas
 
 #connect to the source vRA instance
 Connect-vRAServer -Server $sourceVra -Tenant $tenant -Credential $cred  -IgnoreCertRequirements
-Get-vRAEntitlement | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File $path/entitlements.json
+Get-vRAEntitlement | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File package/entitlements.json
