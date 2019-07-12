@@ -16,5 +16,5 @@ $cred = New-Object System.Management.Automation.PSCredential ($s.username, $secp
 # Connect to the source vRA instance
 Connect-vRAServer -Server $s.url -Tenant $s.tenant -Credential $cred  -IgnoreCertRequirements
 
-Get-vRAReservation| Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File package/reservations.json
+Get-vRAReservation| Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File configurations/reservations.json
 
