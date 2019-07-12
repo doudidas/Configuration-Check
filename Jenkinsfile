@@ -1,9 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('Prepare') {
+    stage('Get conf') {
       steps {
-        sh 'pwsh ./init.ps1'
+        sh '''git clone https://github.com/doudidas/configurations.git
+cd configurations
+git checkout dev'''
       }
     }
     stage('Get vRA conf') {
@@ -38,6 +40,16 @@ pipeline {
     stage('Archive files') {
       steps {
         archiveArtifacts 'package/*'
+      }
+    }
+    stage('Move configuration files') {
+      steps {
+        sh 'mv package/* configurations'
+      }
+    }
+    stage('Git Diff') {
+      steps {
+        sh 'git diff '
       }
     }
   }
