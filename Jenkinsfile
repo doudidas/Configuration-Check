@@ -1,19 +1,17 @@
 pipeline {
   agent any
   stages {
-    stage('Init Connexion') {
+    stage('Create package folder') {
       steps {
-        sh 'pwsh ./init.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'
+        sh 'pwsh ./init.ps1'
       }
     }
     stage('Get vRA-Content') {
       parallel {
         stage('Get vRA-Content') {
           steps {
-            sh 'pwsh ./init.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'
             sh '''#!/usr/bin/pwsh
-Get-vRAContent | Select-Object -Property * -ExcludeProperty Id, DateCreated, CreatedDate, LastUpdated | ConvertTo-Json | Out-File package/contents.json
-'''
+contents.ps1'''
           }
         }
         stage('Get BusinessGroups') {
@@ -44,8 +42,8 @@ reservations.ps1'''
     }
     stage('show files') {
       steps {
-        sh '''#!usr/bin/pwsh
-Get-ChildItem ./package | Get-Content -raw | ConvertFrom-Json'''
+        sh '''#!/usr/bin/bash
+cat package/*'''
       }
     }
   }
