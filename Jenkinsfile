@@ -10,7 +10,7 @@ pipeline {
       parallel {
         stage('Get vRA-Content') {
           steps {
-            sh './init.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'
+            sh 'pwsh ./init.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'
             sh '''#!/usr/bin/pwsh
 Get-vRAContent | Select-Object -Property * -ExcludeProperty Id, DateCreated, CreatedDate, LastUpdated | ConvertTo-Json | Out-File package/contents.json
 '''
