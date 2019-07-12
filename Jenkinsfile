@@ -12,44 +12,41 @@ git checkout dev'''
       parallel {
         stage('Get vRA-Content') {
           steps {
-            sh 'pwsh contents.ps1'
+            sh 'pwsh getContents.ps1 source'
           }
         }
         stage('Get Business Groups') {
           steps {
-            sh 'pwsh businessGroup.ps1'
+            sh 'pwsh getBusinessGroups.ps1 source'
           }
         }
         stage('Get Blueprints') {
           steps {
-            sh 'pwsh blueprint.ps1'
+            sh 'pwsh getBlueprints.ps1 source'
           }
         }
         stage('Get Entitlements') {
           steps {
-            sh 'pwsh entitlements.ps1'
+            sh 'pwsh getEntitlements.ps1 source'
           }
         }
         stage('get Reservations') {
           steps {
-            sh 'pwsh reservations.ps1'
+            sh 'pwsh getReservations.ps1 source'
           }
         }
       }
     }
     stage('Archive files') {
       steps {
-        archiveArtifacts 'package/*'
-      }
-    }
-    stage('Move configuration files') {
-      steps {
-        sh 'mv package/* configurations'
+        archiveArtifacts 'configurations/*'
       }
     }
     stage('Git Diff') {
       steps {
-        sh 'git diff '
+        sh '''cd configurations
+git master
+git diff'''
       }
     }
   }
