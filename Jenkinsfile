@@ -1,13 +1,6 @@
 pipeline ***REMOVED***
   agent any
   stages ***REMOVED***
-    stage('Get conf') ***REMOVED***
-      steps ***REMOVED***
-        sh '''git clone git@github.com:doudidas/configurations.git
-cd configurations
-git checkout dev'''
-      ***REMOVED***
-    ***REMOVED***
     stage('Get vRA conf') ***REMOVED***
       parallel ***REMOVED***
         stage('Get vRA-Content') ***REMOVED***
@@ -44,9 +37,7 @@ git checkout dev'''
     ***REMOVED***
     stage('Git Diff') ***REMOVED***
       steps ***REMOVED***
-        sh '''cd configurations
-git master
-git diff'''
+        sh 'git diff master'
       ***REMOVED***
     ***REMOVED***
   ***REMOVED***
