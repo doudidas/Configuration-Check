@@ -10,32 +10,28 @@ pipeline ***REMOVED***
       parallel ***REMOVED***
         stage('Get vRA-Content') ***REMOVED***
           steps ***REMOVED***
-            sh '''#!/usr/bin/pwsh
-contents.ps1'''
+            sh 'pwsh contents.ps1'
+            archiveArtifacts 'package/content.json'
           ***REMOVED***
         ***REMOVED***
         stage('Get BusinessGroups') ***REMOVED***
           steps ***REMOVED***
-            sh '''#!/usr/bin/pwsh
-businessGroup.ps1'''
+            sh 'pwsh businessGroup.ps1'
           ***REMOVED***
         ***REMOVED***
         stage('Get blueprints') ***REMOVED***
           steps ***REMOVED***
-            sh '''#!/usr/bin/pwsh
-blueprint.ps1'''
+            sh 'pwsh blueprint.ps1'
           ***REMOVED***
         ***REMOVED***
         stage('Get Entitlements') ***REMOVED***
           steps ***REMOVED***
-            sh '''#!/usr/bin/pwsh
-entitlements.ps1'''
+            sh 'pwsh entitlements.ps1'
           ***REMOVED***
         ***REMOVED***
         stage('get Reservation') ***REMOVED***
           steps ***REMOVED***
-            sh '''#!/usr/bin/pwsh
-reservations.ps1'''
+            sh 'pwsh reservations.ps1'
           ***REMOVED***
         ***REMOVED***
       ***REMOVED***
