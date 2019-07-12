@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Init Connexion') {
       steps {
-        sh 'pwsh init.ps1'
+        sh 'pwsh ./init.ps1 cava-n-80-154.eng.vmware.com vsphere.local etopin@vsphere.local VMware1!'
       }
     }
     stage('Get vRA-Content') {
