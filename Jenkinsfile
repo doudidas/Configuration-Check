@@ -32,7 +32,7 @@ pipeline ***REMOVED***
     ***REMOVED***
     stage('Git Diff') ***REMOVED***
       steps ***REMOVED***
-        sh 'git branch'
+        sh 'git checkout master'
       ***REMOVED***
     ***REMOVED***
     stage('Archive files') ***REMOVED***
