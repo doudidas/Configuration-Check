@@ -32,7 +32,7 @@ pipeline ***REMOVED***
     ***REMOVED***
     stage('Git Diff') ***REMOVED***
       steps ***REMOVED***
-        sh 'git diff configurations > diff.txt'
+        sh 'git diff configurations > configurations/diff.txt'
       ***REMOVED***
     ***REMOVED***
     stage('Archive files') ***REMOVED***
