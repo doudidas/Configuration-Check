@@ -32,7 +32,7 @@ pipeline {
     }
     stage('Git Diff') {
       steps {
-        sh 'git diff configurations > configurations/diff.txt'
+        sh 'git diff > configuration/diff.txt'
       }
     }
     stage('Archive files') {
