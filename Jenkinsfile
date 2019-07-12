@@ -32,7 +32,10 @@ pipeline {
     }
     stage('Git Diff') {
       steps {
-        sh '''cd configurations
+        sh '''
+cd configurations
+git branch
+git status
 git diff master > diff'''
       }
     }
