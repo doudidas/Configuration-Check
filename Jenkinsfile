@@ -30,16 +30,14 @@ pipeline {
         }
       }
     }
-    stage('Archive files') {
-      steps {
-        archiveArtifacts 'configurations/*'
-      }
-    }
     stage('Git Diff') {
       steps {
-        sh '''cd configurations
-git master
-git diff'''
+        sh 'git diff master > configurations/diff.txt'
+      }
+    }
+    stage('Archive files') {
+      steps {
+        archiveArtifacts 'configurations/* '
       }
     }
   }
