@@ -1,6 +1,6 @@
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
+{
+    "username": "etopin@vsphere.local",
+    "password": "VMware1!",
+    "tenant": "vsphere.local",
+    "url": "cava-n-80-154.eng.vmware.com"
+}
