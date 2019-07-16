@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage("Setup Dev Connection "){
         steps {
-            sh './connectToServer.ps1 source | ConvertTo-Json | Out-File ./cache_session.json'
+            sh 'pwsh ./connectToServer.ps1 source | ConvertTo-Json | Out-File ./cache_session.json'
         }
     }
     stage('Get Dev Conf') {
@@ -57,7 +57,7 @@ pipeline {
     }
     stage("Setup Prod Connection "){
         steps {
-            sh './connectToServer.ps1 destination | ConvertTo-Json | Out-File ./cache_session.json'
+            sh 'pwsh ./connectToServer.ps1 destination | ConvertTo-Json | Out-File ./cache_session.json'
         }
     }
     stage('Get Prod Conf') {
