@@ -1,12 +1,12 @@
 ***REMOVED***
   "Name": "entitlement-01",
   "Description": "",
-  "Status": "INACTIVE",
+  "Status": "Active",
   "EntitledCatalogItems": [
     ***REMOVED***
       "approvalPolicyId": null,
       "hidden": false,
-      "active": false,
+      "active": true,
       "catalogItemRef": "@***REMOVED***id=d32b5661-fc01-4bad-afb7-8d38a1f868b8; label=Docker - CoreOS***REMOVED***",
       "catalogItemRequestable": false
     ***REMOVED***,
