@@ -53,6 +53,7 @@ pipeline {
     stage('Diff With Dev') {
       steps {
         sh 'git diff > configurations/diff_dev.txt'
+        sh 'cat configurations/diff_dev.txt'
       }
     }
     stage("Setup Prod Connection "){
@@ -107,6 +108,7 @@ pipeline {
     stage('Diff With Prod') {
       steps {
         sh 'git diff > configurations/diff_prod.txt'
+        sh 'cat configurations/diff_prod.txt'
       }
     }
     stage("Git cleanup"){
