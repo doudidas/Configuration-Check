@@ -1,0 +1,6 @@
+{
+    "url"     : "vra.corp.com",
+    "tenant"  : "vsphere.local",
+    "username": "serviceAccount@vsphere.local",
+    "password": ""
+}

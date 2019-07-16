@@ -7,7 +7,7 @@ param(
 Get-Content ./cache_session.json | ConvertFrom-Json | Set-Variable vRAConnection
 
 # Get  object and remove some Properties
-$object = Get-vRAPropertyDefinition | Select-Object -Property * -ExcludeProperty DateCreated, LastUpdatedDate,version -ExpandProperty Options | Sort-Object @{ e = 'Id'; a = $true }
+$object = Get-vRAPropertyDefinition | Sort-Object @{ e = 'Id'; a = $true } | Select-Object -Property * -ExcludeProperty DateCreated, LastUpdatedDate,version -ExpandProperty Options 
 
 # Print value
 Write-Output -InputObject $object

@@ -4,6 +4,44 @@
       "type": "constant",
       "value": "@{type=boolean; value=False}"
     },
+    "regex": {
+      "type": "constant",
+      "value": "@{type=string; value=}"
+    },
+    "encrypted": {
+      "type": "constant",
+      "value": "@{type=boolean; value=False}"
+    },
+    "Id": "jk",
+    "Label": "jk",
+    "Description": null,
+    "Type": "STRING",
+    "IsMultivalued": false,
+    "Display": "TEXTBOX",
+    "TenantId": "vsphere.local",
+    "DisplayIndex": null,
+    "PermittedValues": null,
+    "Options": {
+      "mandatory": "@{type=constant; value=}",
+      "regex": "@{type=constant; value=}",
+      "encrypted": "@{type=constant; value=}",
+      "Id": "jk",
+      "Label": "jk",
+      "Description": null,
+      "Type": "STRING",
+      "IsMultivalued": false,
+      "Display": "TEXTBOX",
+      "TenantId": "vsphere.local",
+      "DisplayIndex": null,
+      "PermittedValues": null,
+      "Options": "@{mandatory=; regex=; encrypted=; Id=jk; Label=jk; Description=; Type=STRING; IsMultivalued=False; Display=TEXTBOX; TenantId=vsphere.local; DisplayIndex=; PermittedValues=; Options=}"
+    }
+  },
+  {
+    "mandatory": {
+      "type": "constant",
+      "value": "@{type=boolean; value=False}"
+    },
     "encrypted": {
       "type": "constant",
       "value": "@{type=boolean; value=False}"
@@ -30,6 +68,39 @@
       "DisplayIndex": 1,
       "PermittedValues": null,
       "Options": "@{mandatory=; encrypted=; Id=requestID; Label=requestID; Description=; Type=STRING; IsMultivalued=False; Display=TEXTAREA; TenantId=; DisplayIndex=1; PermittedValues=; Options=}"
+    }
+  },
+  {
+    "mandatory": {
+      "type": "constant",
+      "value": "@{type=boolean; value=False}"
+    },
+    "encrypted": {
+      "type": "constant",
+      "value": "@{type=boolean; value=False}"
+    },
+    "Id": "s",
+    "Label": "s",
+    "Description": null,
+    "Type": "DECIMAL",
+    "IsMultivalued": false,
+    "Display": "TEXTBOX",
+    "TenantId": "vsphere.local",
+    "DisplayIndex": null,
+    "PermittedValues": null,
+    "Options": {
+      "mandatory": "@{type=constant; value=}",
+      "encrypted": "@{type=constant; value=}",
+      "Id": "s",
+      "Label": "s",
+      "Description": null,
+      "Type": "DECIMAL",
+      "IsMultivalued": false,
+      "Display": "TEXTBOX",
+      "TenantId": "vsphere.local",
+      "DisplayIndex": null,
+      "PermittedValues": null,
+      "Options": "@{mandatory=; encrypted=; Id=s; Label=s; Description=; Type=DECIMAL; IsMultivalued=False; Display=TEXTBOX; TenantId=vsphere.local; DisplayIndex=; PermittedValues=; Options=}"
     }
   },
   {

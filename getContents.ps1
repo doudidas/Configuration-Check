@@ -7,10 +7,10 @@ param(
 Get-Content ./cache_session.json | ConvertFrom-Json | Set-Variable vRAConnection
 
 # Get  object and remove some Properties
-$object = Get-vRAContent | Select-Object -Property * -ExcludeProperty Id, DateCreated, CreatedDate, LastUpdated
+$object = Get-vRAContent | Sort-Object @{ e = 'Id'; a = $true } | Select-Object -Property * -ExcludeProperty Id, DateCreated, CreatedDate, LastUpdated
 
 # Print value
 Write-Output -InputObject $object
 
 # Convert to JSON file
-ConvertTo-Json -InputObject $object| Out-File "configurations/contents.json"
+ConvertTo-Json -InputObject $object | Out-File "configurations/contents.json"
