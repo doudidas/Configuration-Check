@@ -40,7 +40,7 @@ pipeline {
         }
       }
     }
-    stage('Git Diff') {
+    stage('Diff With Dev') {
       steps {
         sh 'git diff > configurations/diff_dev.txt'
       }
@@ -84,7 +84,7 @@ pipeline {
         }
       }
     }
-    stage('Git Diff') {
+    stage('Diff With Prod') {
       steps {
         sh 'git diff > configurations/diff_prod.txt'
       }
