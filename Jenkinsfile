@@ -45,7 +45,7 @@ pipeline {
         sh 'git diff > configurations/diff_dev.txt'
       }
     }
-    stage('Get prod conf') {
+    stage('Get Prod Conf') {
       parallel {
         stage('Get vRA-Content') {
           steps {
