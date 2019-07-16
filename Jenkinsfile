@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage("Setup Dev Connection "){
+        steps {
+            sh 'pwsh ./connectToServer.ps1 source'
+        }
+    }
     stage('Get Dev Conf') {
       parallel {
         stage('Get vRA-Content') {
@@ -16,6 +21,11 @@ pipeline {
         stage('Get Source Machines') {
           steps {
             sh 'pwsh getSourceMachines.ps1 source'
+          }
+        }
+        stage('Get Services') {
+          steps {
+            sh 'pwsh getServiceStatuts.ps1 source'
           }
         }
         stage('Get PropertyDefinition') {
@@ -45,6 +55,11 @@ pipeline {
         sh 'git diff > configurations/diff_dev.txt'
       }
     }
+    stage("Setup Prod Connection "){
+        steps {
+            sh 'pwsh ./connectToServer.ps1 destination'
+        }
+    }
     stage('Get Prod Conf') {
       parallel {
         stage('Get vRA-Content') {
@@ -60,6 +75,11 @@ pipeline {
         stage('Get Source Machines') {
           steps {
             sh 'pwsh getSourceMachines.ps1 destination'
+          }
+        }
+        stage('Get Services') {
+          steps {
+            sh 'pwsh getServiceStatuts.ps1 source'
           }
         }
         stage('Get PropertyDefinition') {
