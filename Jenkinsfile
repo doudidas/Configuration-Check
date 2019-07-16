@@ -1,44 +1,44 @@
-pipeline ***REMOVED***
+pipeline {
   agent any
-  stages ***REMOVED***
-    stage('Get vRA conf') ***REMOVED***
-      parallel ***REMOVED***
-        stage('Get vRA-Content') ***REMOVED***
-          steps ***REMOVED***
+  stages {
+    stage('Get vRA conf') {
+      parallel {
+        stage('Get vRA-Content') {
+          steps {
             sh 'pwsh getContents.ps1 source'
-          ***REMOVED***
-        ***REMOVED***
-        stage('Get Business Groups') ***REMOVED***
-          steps ***REMOVED***
+          }
+        }
+        stage('Get Business Groups') {
+          steps {
             sh 'pwsh getBusinessGroups.ps1 source'
-          ***REMOVED***
-        ***REMOVED***
-        stage('Get Blueprints') ***REMOVED***
-          steps ***REMOVED***
+          }
+        }
+        stage('Get Blueprints') {
+          steps {
             sh 'pwsh getBlueprints.ps1 source'
-          ***REMOVED***
-        ***REMOVED***
-        stage('Get Entitlements') ***REMOVED***
-          steps ***REMOVED***
+          }
+        }
+        stage('Get Entitlements') {
+          steps {
             sh 'pwsh getEntitlements.ps1 source'
-          ***REMOVED***
-        ***REMOVED***
-        stage('get Reservations') ***REMOVED***
-          steps ***REMOVED***
+          }
+        }
+        stage('get Reservations') {
+          steps {
             sh 'pwsh getReservations.ps1 source'
-          ***REMOVED***
-        ***REMOVED***
-      ***REMOVED***
-    ***REMOVED***
-    stage('Git Diff') ***REMOVED***
-      steps ***REMOVED***
+          }
+        }
+      }
+    }
+    stage('Git Diff') {
+      steps {
         sh 'git diff > configurations/diff.txt'
-      ***REMOVED***
-    ***REMOVED***
-    stage('Archive files') ***REMOVED***
-      steps ***REMOVED***
+      }
+    }
+    stage('Archive files') {
+      steps {
         archiveArtifacts 'configurations/* '
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+      }
+    }
+  }
+}

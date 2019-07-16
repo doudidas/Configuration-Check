@@ -1,4 +1,4 @@
-***REMOVED***
+{
   "CreatedDate": "2019-06-24T16:31:19.046Z",
   "LastUpdated": "2019-06-26T09:23:37.031Z",
   "Version": 2,
@@ -9,26 +9,26 @@
   "Enabled": true,
   "Priority": 1,
   "ReservationPolicyId": null,
-  "AlertPolicy": ***REMOVED***
+  "AlertPolicy": {
     "enabled": false,
     "frequencyReminder": 0,
     "emailBgMgr": true,
     "recipients": [],
     "alerts": [
-      "@***REMOVED***alertPercentLevel=80; referenceResourceId=storage***REMOVED***",
-      "@***REMOVED***alertPercentLevel=80; referenceResourceId=memory***REMOVED***",
-      "@***REMOVED***alertPercentLevel=80; referenceResourceId=cpu***REMOVED***",
-      "@***REMOVED***alertPercentLevel=80; referenceResourceId=machine***REMOVED***"
+      "@{alertPercentLevel=80; referenceResourceId=storage}",
+      "@{alertPercentLevel=80; referenceResourceId=memory}",
+      "@{alertPercentLevel=80; referenceResourceId=cpu}",
+      "@{alertPercentLevel=80; referenceResourceId=machine}"
     ]
-  ***REMOVED***,
-  "ExtensionData": ***REMOVED***
+  },
+  "ExtensionData": {
     "entries": [
-      "@***REMOVED***key=reservationMemory; value=***REMOVED***",
-      "@***REMOVED***key=reservationStorages; value=***REMOVED***",
-      "@***REMOVED***key=machineQuota; value=***REMOVED***",
-      "@***REMOVED***key=computeResource; value=***REMOVED***",
-      "@***REMOVED***key=reservationNetworks; value=***REMOVED***",
-      "@***REMOVED***key=resourcePool; value=***REMOVED***"
+      "@{key=reservationMemory; value=}",
+      "@{key=reservationStorages; value=}",
+      "@{key=machineQuota; value=}",
+      "@{key=computeResource; value=}",
+      "@{key=reservationNetworks; value=}",
+      "@{key=resourcePool; value=}"
     ]
-  ***REMOVED***
-***REMOVED***
+  }
+}
