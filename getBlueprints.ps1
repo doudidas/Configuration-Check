@@ -4,8 +4,13 @@ param(
 )
 
 # Connect to the source vRA instance
-# ./connectToServer.ps1 $target
 Get-Content ./cache_session.json | ConvertFrom-Json | Set-Variable vRAConnection
 
-# Parse values and save as JSON file
-Get-vRABlueprint | Select-Object -Property * -ExcludeProperty Id, LastUpdated, CreatedDate, Version | ConvertTo-Json| Out-File "configurations/blueprints.json"
+# Get  object and remove some Properties
+$object = Get-vRABlueprint | Select-Object -Property * -ExcludeProperty Id, LastUpdated, CreatedDate, Version
+
+# Print value
+Write-Output -InputObject $object
+
+# Convert to JSON file
+ConvertTo-Json -InputObject $object| Out-File "configurations/blueprints.json"
