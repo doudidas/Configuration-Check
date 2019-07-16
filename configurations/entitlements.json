@@ -477,17 +477,13 @@
   ],
   "EntitledServices": [],
   "ExpiryDate": null,
-  "LastUpdatedBy": "Edouard Topin",
-  "LastUpdatedDate": "2019-07-12T18:13:04.958Z",
   "Organization": {
     "tenantRef": "vsphere.local",
     "tenantLabel": "vsphere.local",
-    "subtenantRef": "b3a2dc51-5267-410c-87f3-ddfefc1645a7",
     "subtenantLabel": "businessgroup-01"
   },
   "Principals": [],
   "PriorityOrder": 1,
   "StatusName": "Active",
-  "LocalScopeForActions": true,
-  "Version": 4
+  "LocalScopeForActions": true
 }

@@ -1,11 +1,33 @@
 {
-  "CreatedDate": "2019-06-24T16:31:19.046Z",
-  "LastUpdated": "2019-06-26T09:23:37.031Z",
-  "Version": 2,
+  "entries": [
+    {
+      "key": "reservationMemory",
+      "value": "@{type=complex; componentTypeId=; componentId=; classId=; typeFilter=; values=}"
+    },
+    {
+      "key": "reservationStorages",
+      "value": "@{type=multiple; elementTypeId=COMPLEX; items=System.Object[]}"
+    },
+    {
+      "key": "machineQuota",
+      "value": "@{type=integer; value=0}"
+    },
+    {
+      "key": "computeResource",
+      "value": "@{type=entityRef; classId=ComputeResource; id=7eda8cc9-469c-422c-b952-3ecf5d31776d; componentId=; label=Cluster (cava-s-182-200.eng.vmware.com)}"
+    },
+    {
+      "key": "reservationNetworks",
+      "value": "@{type=multiple; elementTypeId=COMPLEX; items=System.Object[]}"
+    },
+    {
+      "key": "resourcePool",
+      "value": "@{type=entityRef; classId=ResourcePool; id=91c19eb7-3118-49ca-9a24-03a977411a15; componentId=; label=Resources}"
+    }
+  ],
   "Name": "reservation-bg-01",
   "ReservationTypeId": "Infrastructure.Reservation.Virtual.vSphere",
   "TenantId": "vsphere.local",
-  "SubTenantId": "b3a2dc51-5267-410c-87f3-ddfefc1645a7",
   "Enabled": true,
   "Priority": 1,
   "ReservationPolicyId": null,
@@ -29,6 +51,30 @@
       "@{key=computeResource; value=}",
       "@{key=reservationNetworks; value=}",
       "@{key=resourcePool; value=}"
-    ]
+    ],
+    "Name": "reservation-bg-01",
+    "ReservationTypeId": "Infrastructure.Reservation.Virtual.vSphere",
+    "TenantId": "vsphere.local",
+    "Enabled": true,
+    "Priority": 1,
+    "ReservationPolicyId": null,
+    "AlertPolicy": {
+      "enabled": false,
+      "frequencyReminder": 0,
+      "emailBgMgr": true,
+      "recipients": "",
+      "alerts": "   "
+    },
+    "ExtensionData": {
+      "entries": "     ",
+      "Name": "reservation-bg-01",
+      "ReservationTypeId": "Infrastructure.Reservation.Virtual.vSphere",
+      "TenantId": "vsphere.local",
+      "Enabled": true,
+      "Priority": 1,
+      "ReservationPolicyId": null,
+      "AlertPolicy": "@{enabled=False; frequencyReminder=0; emailBgMgr=True; recipients=System.Object[]; alerts=System.Object[]}",
+      "ExtensionData": "@{entries=System.Object[]; Name=reservation-bg-01; ReservationTypeId=Infrastructure.Reservation.Virtual.vSphere; TenantId=vsphere.local; Enabled=True; Priority=1; ReservationPolicyId=; AlertPolicy=; ExtensionData=}"
+    }
   }
 }

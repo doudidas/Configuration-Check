@@ -1,4 +1,14 @@
 {
+  "entries": [
+    {
+      "key": "iaas-ad-container",
+      "value": "@{type=string; value=}"
+    },
+    {
+      "key": "iaas-manager-emails",
+      "value": "@{type=string; value=etopin@vmware.com}"
+    }
+  ],
   "Name": "businessgroup-01",
   "Description": "",
   "Roles": null,
@@ -6,7 +16,31 @@
     "entries": [
       "@{key=iaas-ad-container; value=}",
       "@{key=iaas-manager-emails; value=}"
-    ]
+    ],
+    "Name": "businessgroup-01",
+    "Description": "",
+    "Roles": null,
+    "ExtensionData": {
+      "entries": " ",
+      "Name": "businessgroup-01",
+      "Description": "",
+      "Roles": null,
+      "ExtensionData": "@{entries=System.Object[]; Name=businessgroup-01; Description=; Roles=; ExtensionData=; GroupManagerRole=System.Object[]; SupportUserRole=System.Object[]; SharedAccessUserRole=; UserRole=System.Object[]; Tenant=vsphere.local}",
+      "GroupManagerRole": "",
+      "SupportUserRole": "",
+      "SharedAccessUserRole": null,
+      "UserRole": "",
+      "Tenant": "vsphere.local"
+    },
+    "GroupManagerRole": [
+      "@{domain=vsphere.local; name=etopin}"
+    ],
+    "SupportUserRole": [],
+    "SharedAccessUserRole": null,
+    "UserRole": [
+      "@{domain=vsphere.local; name=api-user}"
+    ],
+    "Tenant": "vsphere.local"
   },
   "GroupManagerRole": [
     {

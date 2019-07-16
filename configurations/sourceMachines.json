@@ -1,26 +1,5 @@
 [
   {
-    "Name": "WebTinyCentOS65x86",
-    "Description": null,
-    "ReservationName": null,
-    "HostName": "Cluster",
-    "ExternalId": null,
-    "Status": "Unmanaged",
-    "EndpointName": "cava-s-182-200.eng.vmware.com",
-    "Region": null,
-    "ParentTemplate": null,
-    "CPU": 1,
-    "MemoryMB": 128,
-    "StorageGB": 1,
-    "IsTemplate": true,
-    "GuestOsFamily": "rhel6Guest",
-    "InterfaceType": "VSPHERE",
-    "Disks": [
-      "@{id=4a9a2f74-458e-44b5-81de-1b8b4de4db6c; name=Hard disk 1; capacity=1; externalDiskId=6000C296-17ca-0eba-d455-4c6bcaac8d39; deviceId=SCSI (0:0)}"
-    ],
-    "Properties": []
-  },
-  {
     "Name": "TinyWin7Cava",
     "Description": null,
     "ReservationName": null,
@@ -38,6 +17,27 @@
     "InterfaceType": "VSPHERE",
     "Disks": [
       "@{id=0ddcda4d-12d8-4649-ae1c-7a9542ef1ac3; name=Hard disk 1; capacity=8; externalDiskId=6000C29a-1dc4-5e56-856e-bbdf794be860; deviceId=SCSI (0:0)}"
+    ],
+    "Properties": []
+  },
+  {
+    "Name": "WebTinyCentOS65x86",
+    "Description": null,
+    "ReservationName": null,
+    "HostName": "Cluster",
+    "ExternalId": null,
+    "Status": "Unmanaged",
+    "EndpointName": "cava-s-182-200.eng.vmware.com",
+    "Region": null,
+    "ParentTemplate": null,
+    "CPU": 1,
+    "MemoryMB": 128,
+    "StorageGB": 1,
+    "IsTemplate": true,
+    "GuestOsFamily": "rhel6Guest",
+    "InterfaceType": "VSPHERE",
+    "Disks": [
+      "@{id=4a9a2f74-458e-44b5-81de-1b8b4de4db6c; name=Hard disk 1; capacity=1; externalDiskId=6000C296-17ca-0eba-d455-4c6bcaac8d39; deviceId=SCSI (0:0)}"
     ],
     "Properties": []
   }
