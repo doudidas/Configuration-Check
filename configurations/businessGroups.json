@@ -1,26 +1,26 @@
-***REMOVED***
+{
   "Name": "businessgroup-01",
   "Description": "",
   "Roles": null,
-  "ExtensionData": ***REMOVED***
+  "ExtensionData": {
     "entries": [
-      "@***REMOVED***key=iaas-ad-container; value=***REMOVED***",
-      "@***REMOVED***key=iaas-manager-emails; value=***REMOVED***"
+      "@{key=iaas-ad-container; value=}",
+      "@{key=iaas-manager-emails; value=}"
     ]
-  ***REMOVED***,
+  },
   "GroupManagerRole": [
-    ***REMOVED***
+    {
       "domain": "vsphere.local",
       "name": "etopin"
-    ***REMOVED***
+    }
   ],
   "SupportUserRole": [],
   "SharedAccessUserRole": null,
   "UserRole": [
-    ***REMOVED***
+    {
       "domain": "vsphere.local",
       "name": "api-user"
-    ***REMOVED***
+    }
   ],
   "Tenant": "vsphere.local"
-***REMOVED***
+}
