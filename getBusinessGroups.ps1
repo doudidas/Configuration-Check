@@ -7,7 +7,7 @@ param(
 Get-Content ./cache_session.json | ConvertFrom-Json | Set-Variable vRAConnection
 
 # Get  object and remove some Properties
-$object = Get-vRABusinessGroup | Select-Object -Property * -ExcludeProperty Id
+$object = Get-vRABusinessGroup | Sort-Object @{ e = 'Id'; a = $true } | Select-Object -Property * -ExcludeProperty Id -ExpandProperty ExtensionData
 
 # Print value
 Write-Output -InputObject $object

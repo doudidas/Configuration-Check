@@ -1,14 +1,43 @@
-{
-  "Id": "requestID",
-  "Label": "requestID",
-  "Description": null,
-  "Type": "STRING",
-  "IsMultivalued": false,
-  "Display": "TEXTAREA",
-  "TenantId": null,
-  "DisplayIndex": 1,
-  "PermittedValues": null,
-  "Options": {
+[
+  {
+    "mandatory": {
+      "type": "constant",
+      "value": "@{type=boolean; value=False}"
+    },
+    "regex": {
+      "type": "constant",
+      "value": "@{type=string; value=}"
+    },
+    "encrypted": {
+      "type": "constant",
+      "value": "@{type=boolean; value=False}"
+    },
+    "Id": "jk",
+    "Label": "jk",
+    "Description": null,
+    "Type": "STRING",
+    "IsMultivalued": false,
+    "Display": "TEXTBOX",
+    "TenantId": "vsphere.local",
+    "DisplayIndex": null,
+    "PermittedValues": null,
+    "Options": {
+      "mandatory": "@{type=constant; value=}",
+      "regex": "@{type=constant; value=}",
+      "encrypted": "@{type=constant; value=}",
+      "Id": "jk",
+      "Label": "jk",
+      "Description": null,
+      "Type": "STRING",
+      "IsMultivalued": false,
+      "Display": "TEXTBOX",
+      "TenantId": "vsphere.local",
+      "DisplayIndex": null,
+      "PermittedValues": null,
+      "Options": "@{mandatory=; regex=; encrypted=; Id=jk; Label=jk; Description=; Type=STRING; IsMultivalued=False; Display=TEXTBOX; TenantId=vsphere.local; DisplayIndex=; PermittedValues=; Options=}"
+    }
+  },
+  {
     "mandatory": {
       "type": "constant",
       "value": "@{type=boolean; value=False}"
@@ -16,7 +45,110 @@
     "encrypted": {
       "type": "constant",
       "value": "@{type=boolean; value=False}"
+    },
+    "Id": "requestID",
+    "Label": "requestID",
+    "Description": null,
+    "Type": "STRING",
+    "IsMultivalued": false,
+    "Display": "TEXTAREA",
+    "TenantId": null,
+    "DisplayIndex": 1,
+    "PermittedValues": null,
+    "Options": {
+      "mandatory": "@{type=constant; value=}",
+      "encrypted": "@{type=constant; value=}",
+      "Id": "requestID",
+      "Label": "requestID",
+      "Description": null,
+      "Type": "STRING",
+      "IsMultivalued": false,
+      "Display": "TEXTAREA",
+      "TenantId": null,
+      "DisplayIndex": 1,
+      "PermittedValues": null,
+      "Options": "@{mandatory=; encrypted=; Id=requestID; Label=requestID; Description=; Type=STRING; IsMultivalued=False; Display=TEXTAREA; TenantId=; DisplayIndex=1; PermittedValues=; Options=}"
     }
   },
-  "Version": 0
-}
+  {
+    "mandatory": {
+      "type": "constant",
+      "value": "@{type=boolean; value=False}"
+    },
+    "encrypted": {
+      "type": "constant",
+      "value": "@{type=boolean; value=False}"
+    },
+    "Id": "s",
+    "Label": "s",
+    "Description": null,
+    "Type": "DECIMAL",
+    "IsMultivalued": false,
+    "Display": "TEXTBOX",
+    "TenantId": "vsphere.local",
+    "DisplayIndex": null,
+    "PermittedValues": null,
+    "Options": {
+      "mandatory": "@{type=constant; value=}",
+      "encrypted": "@{type=constant; value=}",
+      "Id": "s",
+      "Label": "s",
+      "Description": null,
+      "Type": "DECIMAL",
+      "IsMultivalued": false,
+      "Display": "TEXTBOX",
+      "TenantId": "vsphere.local",
+      "DisplayIndex": null,
+      "PermittedValues": null,
+      "Options": "@{mandatory=; encrypted=; Id=s; Label=s; Description=; Type=DECIMAL; IsMultivalued=False; Display=TEXTBOX; TenantId=vsphere.local; DisplayIndex=; PermittedValues=; Options=}"
+    }
+  },
+  {
+    "increment": {
+      "type": "constant",
+      "value": "@{type=decimal; value=1}"
+    },
+    "mandatory": {
+      "type": "constant",
+      "value": "@{type=boolean; value=False}"
+    },
+    "minValue": {
+      "type": "constant",
+      "value": "@{type=integer; value=5}"
+    },
+    "maxValue": {
+      "type": "constant",
+      "value": "@{type=integer; value=10}"
+    },
+    "encrypted": {
+      "type": "constant",
+      "value": "@{type=boolean; value=False}"
+    },
+    "Id": "test",
+    "Label": "test",
+    "Description": null,
+    "Type": "DECIMAL",
+    "IsMultivalued": false,
+    "Display": "SLIDER",
+    "TenantId": "vsphere.local",
+    "DisplayIndex": null,
+    "PermittedValues": null,
+    "Options": {
+      "increment": "@{type=constant; value=}",
+      "mandatory": "@{type=constant; value=}",
+      "minValue": "@{type=constant; value=}",
+      "maxValue": "@{type=constant; value=}",
+      "encrypted": "@{type=constant; value=}",
+      "Id": "test",
+      "Label": "test",
+      "Description": null,
+      "Type": "DECIMAL",
+      "IsMultivalued": false,
+      "Display": "SLIDER",
+      "TenantId": "vsphere.local",
+      "DisplayIndex": null,
+      "PermittedValues": null,
+      "Options": "@{increment=; mandatory=; minValue=; maxValue=; encrypted=; Id=test; Label=test; Description=; Type=DECIMAL; IsMultivalued=False; Display=SLIDER; TenantId=vsphere.local; DisplayIndex=; PermittedValues=; Options=}"
+    }
+  }
+]
