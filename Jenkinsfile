@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Get PropertyDefinition') {
           steps {
-            sh 'pwsh getPropertyDefintions.ps1 source'
+            sh 'pwsh getPropertyDefinitions.ps1 source'
           }
         }
         stage('Get Blueprints') {
@@ -64,7 +64,7 @@ pipeline {
         }
         stage('Get PropertyDefinition') {
           steps {
-            sh 'pwsh getPropertyDefintions.ps1 destination'
+            sh 'pwsh getPropertyDefinitions.ps1 destination'
           }
         }
         stage('Get Blueprints') {
