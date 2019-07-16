@@ -1,0 +1,686 @@
+[
+  {
+    "Name": "advanced-designer-service",
+    "TypeId": "com.vmware.csp.core.designer.service",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/advanced-designer-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "advanced-designer-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:14:55.501Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "8bad6605-c731-4b07-b666-ff2a02c3e5c1",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.designer.service.api"
+    }
+  },
+  {
+    "Name": "approval-service",
+    "TypeId": "com.vmware.csp.core.cafe.approvals",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/approval-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "approval-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:17:32.87Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "f149899b-86e5-4ca6-8e81-2b385da34de9",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.cafe.approvals.api"
+    }
+  },
+  {
+    "Name": "authentication",
+    "TypeId": "com.vmware.csp.cafe.authentication",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/identity/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "identity",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:13:39.397Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "64922aac-7e3a-4587-b08c-09b85d1f0492",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.cafe.identity.api"
+    }
+  },
+  {
+    "Name": "authorization",
+    "TypeId": "com.vmware.csp.cafe.authorization",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/identity/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "identity",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:13:39.397Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "64922aac-7e3a-4587-b08c-09b85d1f0492",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.cafe.identity.api"
+    }
+  },
+  {
+    "Name": "branding-service",
+    "TypeId": "com.vmware.csp.core.branding.service",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/branding-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "branding-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:14:22.245Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "1fbcaace-0d2b-4c50-8139-57df08aa70a2",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.branding.service.api"
+    }
+  },
+  {
+    "Name": "catalog-service",
+    "TypeId": "com.vmware.csp.core.cafe.catalog",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/catalog-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "catalog-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:17:42.88Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "c81ff7da-3a10-4636-969f-b99258adea79",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.cafe.catalog.api"
+    }
+  },
+  {
+    "Name": "component-registry",
+    "TypeId": "com.vmware.csp.core.cafe.componentregistry",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/component-registry/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "component-registry",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:13:20.876Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": null,
+      "sslCertificateInfo": "@{identityCertificateExists=False; issuerName=; principalName=; notValidBefore=; notValidAfter=; thumbprint=}",
+      "defaultServiceEndpointType": null
+    }
+  },
+  {
+    "Name": "composition-service",
+    "TypeId": "com.vmware.csp.component.cafe.composition",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/composition-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "composition-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:17:15.972Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "766b90da-6823-4131-9d12-29e1db85f768",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.cafe.composition.api"
+    }
+  },
+  {
+    "Name": "config-management-service",
+    "TypeId": "com.vmware.csp.component.cafe.config.management",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/config-management-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "config-management-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:18:13.573Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "d5d546b5-4645-42bd-8ae4-d7339f2267c5",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.cafe.config.management.api"
+    }
+  },
+  {
+    "Name": "console-proxy-service",
+    "TypeId": "com.vmware.csp.component.console.proxy.service",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/console-proxy-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "console-proxy-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:14:50.033Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "a6dd91e2-b9d3-421a-a749-ec91e5e917cf",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.console.proxy.service.api"
+    }
+  },
+  {
+    "Name": "container-service",
+    "TypeId": "com.vmware.csp.component.cafe.container",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/container-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "provisioning-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:15:45.907Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "cdbac321-ddb5-4627-a658-ae42821b385c",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.cafe.provisioning.api"
+    }
+  },
+  {
+    "Name": "content-management",
+    "TypeId": "com.vmware.csp.core.content.service",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/content-management-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "content-management",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:16:49.663Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "c54f8c20-0251-4968-9743-7d5ed0d9f670",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.content.service.api"
+    }
+  },
+  {
+    "Name": "endpoint-configuration-service",
+    "TypeId": "com.vmware.csp.core.endpoint.configuration",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/endpoint-configuration-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "endpoint-configuration-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:17:39.406Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "2e5b0969-32b8-4932-99df-05deb7f9771d",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.endpoint.configuration.api"
+    }
+  },
+  {
+    "Name": "event-broker-service",
+    "TypeId": "com.vmware.csp.cafe.event.broker",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/event-broker-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "event-broker-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:13:34.947Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "9fc5d6d0-1c69-48a5-9ff3-51375312472c",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.cafe.event.broker.api"
+    }
+  },
+  {
+    "Name": "eventlog-service",
+    "TypeId": "com.vmware.csp.cafe.eventlog",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/event-broker-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "event-broker-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:13:34.947Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "9fc5d6d0-1c69-48a5-9ff3-51375312472c",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.cafe.event.broker.api"
+    }
+  },
+  {
+    "Name": "fabric-service",
+    "TypeId": "com.vmware.csp.fabric.cafe.fabric",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/iaas-proxy-provider/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "iaas-proxy-provider",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:16:18.762Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "aba0038c-190d-4a46-9cbc-d9a6ca8e5ebf",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.iaas.proxy.provider.api"
+    }
+  },
+  {
+    "Name": "forms-service",
+    "TypeId": "com.vmware.csp.core.cafe.forms",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/forms-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "forms-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:18:16.885Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "5faa38bf-d320-46a9-8b0f-c420926ff258",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.cafe.forms.api"
+    }
+  },
+  {
+    "Name": "healthbroker-proxy-server",
+    "TypeId": "com.vmware.csp.component.healthbroker.proxy",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/healthbroker-proxy-server/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "healthbroker-proxy-server",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:16:59.811Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "1a74dffd-31f8-418e-a335-1e9c38ba6356",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.healthbroker.proxy.api"
+    }
+  },
+  {
+    "Name": "iaas-proxy-provider",
+    "TypeId": "com.vmware.csp.component.iaas.proxy.provider",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/iaas-proxy-provider/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "iaas-proxy-provider",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:16:18.762Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "aba0038c-190d-4a46-9cbc-d9a6ca8e5ebf",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.iaas.proxy.provider.api"
+    }
+  },
+  {
+    "Name": "iaas-service",
+    "TypeId": "com.vmware.csp.iaas.blueprint.service",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-88-186.eng.vmware.com/WAPI/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "iaas-service",
+      "solutionUser": null,
+      "startedTime": null,
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": null,
+      "sslCertificateInfo": null,
+      "defaultServiceEndpointType": "com.vmware.csp.iaas.api"
+    }
+  },
+  {
+    "Name": "identity",
+    "TypeId": "com.vmware.csp.core.cafe.identity",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/identity/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "identity",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:13:39.397Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "64922aac-7e3a-4587-b08c-09b85d1f0492",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.cafe.identity.api"
+    }
+  },
+  {
+    "Name": "ipam-service",
+    "TypeId": "com.vmware.csp.component.ipam.service",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/ipam-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "ipam-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:16:17.064Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "b0e81185-65d9-461b-8474-62f45e23170f",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.ipam.service.api"
+    }
+  },
+  {
+    "Name": "licensing-service",
+    "TypeId": "com.vmware.csp.core.cafe.licensing",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/component-registry/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "component-registry",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:13:20.876Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": null,
+      "sslCertificateInfo": "@{identityCertificateExists=False; issuerName=; principalName=; notValidBefore=; notValidAfter=; thumbprint=}",
+      "defaultServiceEndpointType": null
+    }
+  },
+  {
+    "Name": "management-service",
+    "TypeId": "com.vmware.csp.component.management.service",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/management-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "management-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:16:39.611Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "1e4d0c93-f175-4df8-935e-c6f3b26af123",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.management.service.api"
+    }
+  },
+  {
+    "Name": "network-service",
+    "TypeId": "com.vmware.csp.component.network.service",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/network-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "network-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:16:38.297Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "8e80fbde-da18-4582-a3b7-c9a64d5fe8b0",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.network.service.api"
+    }
+  },
+  {
+    "Name": "notification-service",
+    "TypeId": "com.vmware.csp.cafe.notification",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/notification-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "notification-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:13:50.549Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "b23584fe-5f55-414a-89bb-846b562ff399",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.cafe.notification.api"
+    }
+  },
+  {
+    "Name": "o11n-gateway-service",
+    "TypeId": "com.vmware.csp.core.o11n.gateway",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/o11n-gateway-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "o11n-gateway-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:18:14.123Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "cc039681-202d-429a-84ee-a46ba1a7d762",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.o11n.gateway.api"
+    }
+  },
+  {
+    "Name": "placement-service",
+    "TypeId": "com.vmware.csp.component.cafe.placement",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/placement-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "placement-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:15:42.816Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "b2e6d392-12a3-4e59-8825-c3274587eb3c",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.cafe.placement.api"
+    }
+  },
+  {
+    "Name": "plugin-service",
+    "TypeId": "com.vmware.csp.core.plugin.service",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/component-registry/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "component-registry",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:13:20.876Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": null,
+      "sslCertificateInfo": "@{identityCertificateExists=False; issuerName=; principalName=; notValidBefore=; notValidAfter=; thumbprint=}",
+      "defaultServiceEndpointType": null
+    }
+  },
+  {
+    "Name": "portal-service",
+    "TypeId": "com.vmware.csp.core.portal.service",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/portal-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "portal-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:18:06.606Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "507fce39-67d2-4833-98ed-66e2b230b678",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.portal.service.api"
+    }
+  },
+  {
+    "Name": "properties-service",
+    "TypeId": "com.vmware.csp.core.properties.service",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/properties-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "properties-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:14:27.145Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "72908da5-b2fd-4bda-8071-54412fb77f67",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.properties.service.api"
+    }
+  },
+  {
+    "Name": "provisioning-service",
+    "TypeId": "com.vmware.csp.component.cafe.provisioning",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/container-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "provisioning-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:15:45.907Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "cdbac321-ddb5-4627-a658-ae42821b385c",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.cafe.provisioning.api"
+    }
+  },
+  {
+    "Name": "reservation-service",
+    "TypeId": "com.vmware.vcac.core.cafe.reservation",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/reservation-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "reservation-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:17:09.014Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "dd187111-3d6c-432b-a300-478036493b0b",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.vcac.core.cafe.reservation.api"
+    }
+  },
+  {
+    "Name": "shell-ui-app",
+    "TypeId": "com.vmware.csp.core.cafe.shell",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/vcac/services/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "shell-ui-app",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:17:44.38Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "5524d440-78c2-4bec-85e1-324228fea4e0",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": null
+    }
+  },
+  {
+    "Name": "software-service",
+    "TypeId": "com.vmware.csp.component.software.service",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/software-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "software-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:15:59.621Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "86c50575-3fa7-45a4-93ff-e479375609ac",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.component.software.service.api"
+    }
+  },
+  {
+    "Name": "sts-service",
+    "TypeId": "com.vmware.cis.core.sso",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com:443/SAAS/API/1.0/REST/system/health",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": null,
+      "solutionUser": null,
+      "startedTime": null,
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": null,
+      "sslCertificateInfo": null,
+      "defaultServiceEndpointType": null
+    }
+  },
+  {
+    "Name": "vco",
+    "TypeId": "com.vmware.vco.o11n",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com:443/vco/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "vco",
+      "solutionUser": "vco-dthtHEpyPA",
+      "startedTime": "2019-06-24T14:16:20.937Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": "@{identityCertificateExists=False; issuerName=CN=vCO-16b89ad64dba6f3fe00a679e079; principalName=CN=vCO-16b89ad64dba6f3fe00a679e079; notValidBefore=06/23/2019 13:29:30; notValidAfter=06/16/2049 13:29:30; thumbprint=25:6D:13:37:A7:E9:5F:9A:C8:2F:AB:05:28:41:EF:E7:BB:F0:34:4E}",
+      "serviceRegistrationId": "bfc832f0-04e9-4c25-9f8c-11a542ee999b",
+      "sslCertificateInfo": "@{identityCertificateExists=False; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.vco.o11n.api"
+    }
+  },
+  {
+    "Name": "workitem-service",
+    "TypeId": "com.vmware.csp.core.cafe.workitem",
+    "NotAvailable": false,
+    "EndpointUrl": "https://cava-n-80-154.eng.vmware.com/workitem-service/api/status",
+    "ServiceStatus": {
+      "initialized": true,
+      "serviceName": "workitem-service",
+      "solutionUser": "cafe-OE867l_C_A",
+      "startedTime": "2019-06-24T14:13:52.453Z",
+      "serviceInitializationStatus": "REGISTERED",
+      "errorMessage": null,
+      "identityCertificateInfo": null,
+      "serviceRegistrationId": "bd4c6a95-e8ce-4f5e-a570-081bc51fec2d",
+      "sslCertificateInfo": "@{identityCertificateExists=True; issuerName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; principalName=CN=VMware vRA,OU=Unit,O=Organisation,L=PA,ST=ON,C=US; notValidBefore=06/24/2019 13:53:42; notValidAfter=06/22/2024 13:53:42; thumbprint=80:0D:D5:BF:9F:6E:37:74:1A:10:F4:95:ED:12:D2:91:4C:53:00:26}",
+      "defaultServiceEndpointType": "com.vmware.csp.core.cafe.workitem.api"
+    }
+  }
+]

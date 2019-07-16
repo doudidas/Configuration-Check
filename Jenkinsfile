@@ -18,6 +18,11 @@ pipeline {
             sh 'pwsh getSourceMachines.ps1 source'
           }
         }
+        stage('Get Services') {
+          steps {
+            sh 'pwsh getServiceStatuts.ps1 source'
+          }
+        }
         stage('Get PropertyDefinition') {
           steps {
             sh 'pwsh getPropertyDefinitions.ps1 source'
@@ -60,6 +65,11 @@ pipeline {
         stage('Get Source Machines') {
           steps {
             sh 'pwsh getSourceMachines.ps1 destination'
+          }
+        }
+        stage('Get Services') {
+          steps {
+            sh 'pwsh getServiceStatuts.ps1 source'
           }
         }
         stage('Get PropertyDefinition') {
