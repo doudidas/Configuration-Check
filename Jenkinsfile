@@ -3,49 +3,49 @@ pipeline {
   stages {
     stage("Setup Dev Connection "){
         steps {
-            sh 'pwsh ./connectToServer.ps1 source'
+            sh 'pwsh ./connectToServer.ps1 env-dev'
         }
     }
     stage('Get Dev Conf') {
       parallel {
         stage('Get vRA-Content') {
           steps {
-            sh 'pwsh getContents.ps1 source'
+            sh 'pwsh getContents.ps1'
           }
         }
         stage('Get Business Groups') {
           steps {
-            sh 'pwsh getBusinessGroups.ps1 source'
+            sh 'pwsh getBusinessGroups.ps1'
           }
         }
         stage('Get Source Machines') {
           steps {
-            sh 'pwsh getSourceMachines.ps1 source'
+            sh 'pwsh getSourceMachines.ps1'
           }
         }
         stage('Get Services') {
           steps {
-            sh 'pwsh getServiceStatuts.ps1 source'
+            sh 'pwsh getServiceStatuts.ps1'
           }
         }
         stage('Get PropertyDefinition') {
           steps {
-            sh 'pwsh getPropertyDefinitions.ps1 source'
+            sh 'pwsh getPropertyDefinitions.ps1'
           }
         }
         stage('Get Blueprints') {
           steps {
-            sh 'pwsh getBlueprints.ps1 source'
+            sh 'pwsh getBlueprints.ps1'
           }
         }
         stage('Get Entitlements') {
           steps {
-            sh 'pwsh getEntitlements.ps1 source'
+            sh 'pwsh getEntitlements.ps1'
           }
         }
         stage('get Reservations') {
           steps {
-            sh 'pwsh getReservations.ps1 source'
+            sh 'pwsh getReservations.ps1'
           }
         }
       }
@@ -58,49 +58,49 @@ pipeline {
     }
     stage("Setup Prod Connection "){
         steps {
-            sh 'pwsh ./connectToServer.ps1 destination'
+            sh 'pwsh ./connectToServer.ps1 env-prod'
         }
     }
     stage('Get Prod Conf') {
       parallel {
         stage('Get vRA-Content') {
           steps {
-            sh 'pwsh getContents.ps1 destination'
+            sh 'pwsh getContents.ps1'
           }
         }
         stage('Get Business Groups') {
           steps {
-            sh 'pwsh getBusinessGroups.ps1 destination'
+            sh 'pwsh getBusinessGroups.ps1'
           }
         }
         stage('Get Source Machines') {
           steps {
-            sh 'pwsh getSourceMachines.ps1 destination'
+            sh 'pwsh getSourceMachines.ps1'
           }
         }
         stage('Get Services') {
           steps {
-            sh 'pwsh getServiceStatuts.ps1 source'
+            sh 'pwsh getServiceStatuts.ps1'
           }
         }
         stage('Get PropertyDefinition') {
           steps {
-            sh 'pwsh getPropertyDefinitions.ps1 destination'
+            sh 'pwsh getPropertyDefinitions.ps1'
           }
         }
         stage('Get Blueprints') {
           steps {
-            sh 'pwsh getBlueprints.ps1 destination'
+            sh 'pwsh getBlueprints.ps1'
           }
         }
         stage('Get Entitlements') {
           steps {
-            sh 'pwsh getEntitlements.ps1 destination'
+            sh 'pwsh getEntitlements.ps1'
           }
         }
         stage('get Reservations') {
           steps {
-            sh 'pwsh getReservations.ps1 destination'
+            sh 'pwsh getReservations.ps1'
           }
         }
       }
