@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage("Setup Dev Connection "){
+        steps {
+            sh './connectToServer.ps1 source | ConvertTo-Json | Out-File ./cache_session.json'
+        }
+    }
     stage('Get Dev Conf') {
       parallel {
         stage('Get vRA-Content') {
@@ -49,6 +54,11 @@ pipeline {
       steps {
         sh 'git diff > configurations/diff_dev.txt'
       }
+    }
+    stage("Setup Prod Connection "){
+        steps {
+            sh './connectToServer.ps1 destination | ConvertTo-Json | Out-File ./cache_session.json'
+        }
     }
     stage('Get Prod Conf') {
       parallel {
