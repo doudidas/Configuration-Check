@@ -4,7 +4,7 @@ param(
 )
 
 # Connect to the source vRA instance
-connectToServer.ps1 $target
+./connectToServer.ps1 $target
 
 # Parse values and save as JSON file
 Get-vRASourceMachine | Select-Object -Property * -ExcludeProperty Id | ConvertTo-Json | Out-File "configurations/sourceMachines.json"
