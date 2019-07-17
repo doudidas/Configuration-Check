@@ -1,49 +1,57 @@
 pipeline {
-  agent any
   stages {
-    stage('Setup Dev Connection ') {
-      steps {
-        sh 'pwsh ./connectToServer.ps1 dev'
+    stage('Prepare For Dev') {
+      parallel {
+        stage('Prepare workspace') {
+          steps {
+            sh 'mkdir -p diff/dev'
+          }
+        }
+        stage('Connect to vRA') {
+          steps {
+            sh 'pwsh ./connectToServer.ps1 dev'
+          }
+        }
       }
     }
-    stage('Get Dev Conf') {
+    stage('Fetch Elements') {
       parallel {
-        stage('Get vRA-Content') {
+        stage('Contents') {
           steps {
             sh 'pwsh getContents.ps1'
           }
         }
-        stage('Get Business Groups') {
+        stage('Business Groups') {
           steps {
             sh 'pwsh getBusinessGroups.ps1'
           }
         }
-        stage('Get Source Machines') {
+        stage('Source Machines') {
           steps {
             sh 'pwsh getSourceMachines.ps1'
           }
         }
-        stage('Get Services') {
+        stage('Services') {
           steps {
             sh 'pwsh getServiceStatuts.ps1'
           }
         }
-        stage('Get PropertyDefinition') {
+        stage('Property Definition') {
           steps {
             sh 'pwsh getPropertyDefinitions.ps1'
           }
         }
-        stage('Get Blueprints') {
+        stage('Blueprints') {
           steps {
             sh 'pwsh getBlueprints.ps1'
           }
         }
-        stage('Get Entitlements') {
+        stage('Entitlements') {
           steps {
             sh 'pwsh getEntitlements.ps1'
           }
         }
-        stage('get Reservations') {
+        stage('Reservations') {
           steps {
             sh 'pwsh getReservations.ps1'
           }
@@ -97,49 +105,58 @@ pipeline {
         }
       }
     }
-    stage('Setup Prod Connection ') {
-      steps {
-        sh 'pwsh ./connectToServer.ps1 prod'
+    stage('Prepare For Prod') {
+      parallel {
+        stage('Prepare workspace') {
+          steps {
+            sh 'mkdir -p diff/prod'
+          }
+        }
+        stage('Connect to vRA') {
+          steps {
+            sh 'pwsh ./connectToServer.ps1 prod'
+          }
+        }
       }
     }
-    stage('Get Prod Conf') {
+    stage('Fetch Elements') {
       parallel {
-        stage('Get vRA-Content') {
+        stage('Contents') {
           steps {
             sh 'pwsh getContents.ps1'
           }
         }
-        stage('Get Business Groups') {
+        stage('Business Groups') {
           steps {
             sh 'pwsh getBusinessGroups.ps1'
           }
         }
-        stage('Get Source Machines') {
+        stage('Source Machines') {
           steps {
             sh 'pwsh getSourceMachines.ps1'
           }
         }
-        stage('Get Services') {
+        stage('Services') {
           steps {
             sh 'pwsh getServiceStatuts.ps1'
           }
         }
-        stage('Get PropertyDefinition') {
+        stage('Property Definition') {
           steps {
             sh 'pwsh getPropertyDefinitions.ps1'
           }
         }
-        stage('Get Blueprints') {
+        stage('Blueprints') {
           steps {
             sh 'pwsh getBlueprints.ps1'
           }
         }
-        stage('Get Entitlements') {
+        stage('Entitlements') {
           steps {
             sh 'pwsh getEntitlements.ps1'
           }
         }
-        stage('get Reservations') {
+        stage('Reservations') {
           steps {
             sh 'pwsh getReservations.ps1'
           }
