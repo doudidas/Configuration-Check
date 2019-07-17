@@ -2,15 +2,18 @@ pipeline {
   agent any
   stages {
     stage('Prepare For Dev') {
+      environment {
+        platform = "dev"
+      }
       parallel {
         stage('Prepare workspace') {
           steps {
-            sh 'mkdir -p diff/dev'
+            sh 'mkdir -p diff/${platform}'
           }
         }
         stage('Connect to vRA') {
           steps {
-            sh 'pwsh ./connectToServer.ps1 dev'
+            sh 'pwsh ./connectToServer.ps1 ${platform}'
           }
         }
       }
