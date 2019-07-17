@@ -86,7 +86,7 @@ pipeline {
         }
         stage('PropertyDefinition') {
           steps {
-            sh 'git diff configurations/propertyDefintions.json > diff/dev/propertyDefinitions.txt'
+            sh 'git diff configurations/propertyDefinitions > diff/dev/propertyDefinitions.txt'
           }
         }
         stage('Blueprints') {
@@ -188,7 +188,7 @@ pipeline {
         }
         stage('PropertyDefinition') {
           steps {
-            sh 'git diff configurations/propertyDefintions.json > diff/prod/propertyDefinitions.txt'
+            sh 'git diff configurations/propertyDefinitions > diff/prod/propertyDefinitions.txt'
           }
         }
         stage('Blueprints') {
