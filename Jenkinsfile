@@ -1,10 +1,10 @@
 pipeline {
-  agent any
+  agent none
   stages {
-    stage("Setup Dev Connection "){
-        steps {
-            sh 'pwsh ./connectToServer.ps1 dev'
-        }
+    stage('Setup Dev Connection ') {
+      steps {
+        sh 'pwsh ./connectToServer.ps1 dev'
+      }
     }
     stage('Get Dev Conf') {
       parallel {
@@ -51,10 +51,13 @@ pipeline {
       }
     }
     stage('Diff With Dev') {
-            parallel {
+      environment {
+        environment = 'dev'
+      }
+      parallel {
         stage('vRA-Content') {
           steps {
-            sh 'git diff configurations/contents.json > diff/dev/contents.txt'
+            sh 'git diff configurations/contents.json > ./diff/dev/contents.txt'
           }
         }
         stage('Business Groups') {
@@ -94,10 +97,10 @@ pipeline {
         }
       }
     }
-    stage("Setup Prod Connection "){
-        steps {
-            sh 'pwsh ./connectToServer.ps1 prod'
-        }
+    stage('Setup Prod Connection ') {
+      steps {
+        sh 'pwsh ./connectToServer.ps1 prod'
+      }
     }
     stage('Get Prod Conf') {
       parallel {
@@ -144,7 +147,7 @@ pipeline {
       }
     }
     stage('Diff With Prod') {
-            parallel {
+      parallel {
         stage('vRA-Content') {
           steps {
             sh 'git diff configurations/contents.json > diff/prod/contents.txt'
