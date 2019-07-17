@@ -70,49 +70,41 @@ pipeline {
         stage('vRA-Content') {
           steps {
             sh 'git diff configurations/contents.json > ./diff/${platform}/contents.txt'
-            archiveArtifacts 'diff/${platform}/contents.txt'
           }
         }
         stage('Business Groups') {
           steps {
             sh 'git diff configurations/businessGroups.json > diff/${platform}/businessGroups.txt'
-            archiveArtifacts 'diff/${platform}/businessGroups.txt'
           }
         }
         stage('Source Machines') {
           steps {
             sh 'git diff configurations/sourceMachines.json > diff/${platform}/sourceMachines.txt'
-            archiveArtifacts 'diff/${platform}/sourceMachines.txt'
           }
         }
         stage('Services') {
           steps {
             sh 'git diff configurations/services.json > diff/${platform}/services.txt'
-            archiveArtifacts 'diff/${platform}/services.txt'
           }
         }
         stage('PropertyDefinition') {
           steps {
             sh 'git diff configurations/propertyDefinitions.json > diff/${platform}/propertyDefinitions.txt'
-            archiveArtifacts 'diff/${platform}/propertyDefinitions.txt'
           }
         }
         stage('Blueprints') {
           steps {
             sh 'git diff configurations/blueprints.json > diff/${platform}/blueprints.txt'
-            archiveArtifacts 'diff/${platform}/blueprints.txt'
           }
         }
         stage('Entitlements') {
           steps {
             sh 'git diff configurations/entitlements.json > diff/${platform}/entitlements.txt'
-            archiveArtifacts 'diff/${platform}/entitlements.txt'
           }
         }
         stage('Reservations') {
           steps {
             sh 'git diff configurations/reservations.json > diff/${platform}/reservations.txt'
-            archiveArtifacts 'diff/${platform}/reservations.txt'
           }
         }
       }
@@ -186,52 +178,49 @@ pipeline {
         stage('vRA-Content') {
           steps {
             sh 'git diff configurations/contents.json > ./diff/${platform}/contents.txt'
-            archiveArtifacts 'diff/${platform}/contents.txt'
           }
         }
         stage('Business Groups') {
           steps {
             sh 'git diff configurations/businessGroups.json > diff/${platform}/businessGroups.txt'
-            archiveArtifacts 'diff/${platform}/businessGroups.txt'
           }
         }
         stage('Source Machines') {
           steps {
             sh 'git diff configurations/sourceMachines.json > diff/${platform}/sourceMachines.txt'
-            archiveArtifacts 'diff/${platform}/sourceMachines.txt'
           }
         }
         stage('Services') {
           steps {
             sh 'git diff configurations/services.json > diff/${platform}/services.txt'
-            archiveArtifacts 'diff/${platform}/services.txt'
           }
         }
         stage('PropertyDefinition') {
           steps {
             sh 'git diff configurations/propertyDefinitions.json > diff/${platform}/propertyDefinitions.txt'
-            archiveArtifacts 'diff/${platform}/propertyDefinitions.txt'
           }
         }
         stage('Blueprints') {
           steps {
             sh 'git diff configurations/blueprints.json > diff/${platform}/blueprints.txt'
-            archiveArtifacts 'diff/${platform}/blueprints.txt'
           }
         }
         stage('Entitlements') {
           steps {
             sh 'git diff configurations/entitlements.json > diff/${platform}/entitlements.txt'
-            archiveArtifacts 'diff/${platform}/entitlements.txt'
           }
         }
         stage('Reservations') {
           steps {
             sh 'git diff configurations/reservations.json > diff/${platform}/reservations.txt'
-            archiveArtifacts 'diff/${platform}/reservations.txt'
           }
         }
       }
+    }
+  }
+  stage('Archive files') {
+    steps {
+      archiveArtifacts 'diff/*'
     }
   }
 }
