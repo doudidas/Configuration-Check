@@ -217,10 +217,10 @@ pipeline {
         }
       }
     }
-  }
-  stage('Archive files') {
-    steps {
-      archiveArtifacts 'diff/*'
+    stage('Archive files') {
+      steps {
+        archiveArtifacts 'diff/*'
+      }
     }
-  }
-}
+  }  
+}  
