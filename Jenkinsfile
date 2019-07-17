@@ -208,6 +208,7 @@ pipeline {
         stage('Entitlements') {
           steps {
             sh 'git diff configurations/entitlements.json > diff/${platform}/entitlements.txt'
+            sh 'ls -R diff'
           }
         }
         stage('Reservations') {
