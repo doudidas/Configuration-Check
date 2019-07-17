@@ -1,5 +1,5 @@
 {
-  "Name": "entitlement-01-new",
+  "Name": "omg-a-new-name",
   "Description": "",
   "Status": "ACTIVE",
   "EntitledCatalogItems": [
@@ -22,6 +22,13 @@
       "hidden": false,
       "active": true,
       "catalogItemRef": "@{id=8b0c1cca-2678-470d-ab27-05f7c8a9fc21; label=Centos}",
+      "catalogItemRequestable": true
+    },
+    {
+      "approvalPolicyId": null,
+      "hidden": false,
+      "active": true,
+      "catalogItemRef": "@{id=1a47c670-db8b-4084-a224-0583b6883bb7; label=Azure Machine}",
       "catalogItemRequestable": true
     }
   ],
@@ -369,14 +376,6 @@
       "externalId": "composition.resource.action.deployment.resume",
       "active": true,
       "resourceOperationRef": "@{id=59155152-c00e-4044-837b-582b90b2d3ba; label=Resume}"
-    },
-    {
-      "approvalPolicyId": null,
-      "resourceOperationType": "ACTION",
-      "targetResourceTypeRef": "@{id=Infrastructure.Virtual; label=Virtual Machine}",
-      "externalId": "Infrastructure.Virtual.Action.RevertSnapshot",
-      "active": true,
-      "resourceOperationRef": "@{id=ea78dd0d-9c53-45a9-bb97-6f9c1cbcc163; label=Revert To Snapshot}"
     },
     {
       "approvalPolicyId": null,

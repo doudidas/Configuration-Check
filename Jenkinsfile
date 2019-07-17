@@ -1,49 +1,61 @@
 pipeline {
   agent any
   stages {
-    stage("Setup Dev Connection "){
-        steps {
-            sh 'pwsh ./connectToServer.ps1 env-dev'
-        }
-    }
-    stage('Get Dev Conf') {
+    stage('Prepare For Dev') {
+      environment {
+        platform = 'dev'
+      }
       parallel {
-        stage('Get vRA-Content') {
+        stage('Prepare workspace') {
+          steps {
+            sh 'mkdir -p diff/${platform}'
+          }
+        }
+        stage('Connect to vRA') {
+          steps {
+            sh 'pwsh ./connectToServer.ps1 ${platform}'
+          }
+        }
+      }
+    }
+    stage('Fetch Elements from Dev') {
+      parallel {
+        stage('Contents') {
           steps {
             sh 'pwsh getContents.ps1'
           }
         }
-        stage('Get Business Groups') {
+        stage('Business Groups') {
           steps {
             sh 'pwsh getBusinessGroups.ps1'
           }
         }
-        stage('Get Source Machines') {
+        stage('Source Machines') {
           steps {
             sh 'pwsh getSourceMachines.ps1'
           }
         }
-        stage('Get Services') {
+        stage('Services') {
           steps {
             sh 'pwsh getServiceStatuts.ps1'
           }
         }
-        stage('Get PropertyDefinition') {
+        stage('Property Definition') {
           steps {
             sh 'pwsh getPropertyDefinitions.ps1'
           }
         }
-        stage('Get Blueprints') {
+        stage('Blueprints') {
           steps {
             sh 'pwsh getBlueprints.ps1'
           }
         }
-        stage('Get Entitlements') {
+        stage('Entitlements') {
           steps {
             sh 'pwsh getEntitlements.ps1'
           }
         }
-        stage('get Reservations') {
+        stage('Reservations') {
           steps {
             sh 'pwsh getReservations.ps1'
           }
@@ -51,54 +63,107 @@ pipeline {
       }
     }
     stage('Diff With Dev') {
-      steps {
-        sh 'git diff > configurations/diff_dev.txt'
-        sh 'cat configurations/diff_dev.txt'
+      environment {
+        platform = 'dev'
+      }
+      parallel {
+        stage('vRA-Content') {
+          steps {
+            sh 'git diff configurations/contents.json > ./diff/${platform}/contents.txt'
+          }
+        }
+        stage('Business Groups') {
+          steps {
+            sh 'git diff configurations/businessGroups.json > diff/${platform}/businessGroups.txt'
+          }
+        }
+        stage('Source Machines') {
+          steps {
+            sh 'git diff configurations/sourceMachines.json > diff/${platform}/sourceMachines.txt'
+          }
+        }
+        stage('Services') {
+          steps {
+            sh 'git diff configurations/services.json > diff/${platform}/services.txt'
+          }
+        }
+        stage('PropertyDefinition') {
+          steps {
+            sh 'git diff configurations/propertyDefinitions.json > diff/${platform}/propertyDefinitions.txt'
+          }
+        }
+        stage('Blueprints') {
+          steps {
+            sh 'git diff configurations/blueprints.json > diff/${platform}/blueprints.txt'
+          }
+        }
+        stage('Entitlements') {
+          steps {
+            sh 'git diff configurations/entitlements.json > diff/${platform}/entitlements.txt'
+          }
+        }
+        stage('Reservations') {
+          steps {
+            sh 'git diff configurations/reservations.json > diff/${platform}/reservations.txt'
+          }
+        }
       }
     }
-    stage("Setup Prod Connection "){
-        steps {
-            sh 'pwsh ./connectToServer.ps1 env-prod'
-        }
-    }
-    stage('Get Prod Conf') {
+    stage('Prepare For Prod') {
+      environment {
+        platform = 'prod'
+      }
       parallel {
-        stage('Get vRA-Content') {
+        stage('Prepare workspace') {
+          steps {
+            sh 'mkdir -p diff/${platform}'
+          }
+        }
+        stage('Connect to vRA') {
+          steps {
+            sh 'pwsh ./connectToServer.ps1 ${platform}'
+          }
+        }
+      }
+    }
+    stage('Fetch Elements from Prod') {
+      parallel {
+        stage('Contents') {
           steps {
             sh 'pwsh getContents.ps1'
           }
         }
-        stage('Get Business Groups') {
+        stage('Business Groups') {
           steps {
             sh 'pwsh getBusinessGroups.ps1'
           }
         }
-        stage('Get Source Machines') {
+        stage('Source Machines') {
           steps {
             sh 'pwsh getSourceMachines.ps1'
           }
         }
-        stage('Get Services') {
+        stage('Services') {
           steps {
             sh 'pwsh getServiceStatuts.ps1'
           }
         }
-        stage('Get PropertyDefinition') {
+        stage('Property Definition') {
           steps {
             sh 'pwsh getPropertyDefinitions.ps1'
           }
         }
-        stage('Get Blueprints') {
+        stage('Blueprints') {
           steps {
             sh 'pwsh getBlueprints.ps1'
           }
         }
-        stage('Get Entitlements') {
+        stage('Entitlements') {
           steps {
             sh 'pwsh getEntitlements.ps1'
           }
         }
-        stage('get Reservations') {
+        stage('Reservations') {
           steps {
             sh 'pwsh getReservations.ps1'
           }
@@ -106,19 +171,64 @@ pipeline {
       }
     }
     stage('Diff With Prod') {
-      steps {
-        sh 'git diff > configurations/diff_prod.txt'
-        sh 'cat configurations/diff_prod.txt'
+      environment {
+        platform = 'prod'
       }
-    }
-    stage("Git cleanup"){
-      steps{
-          sh 'git checkout configurations/*.json'
+      parallel {
+        stage('vRA-Content') {
+          steps {
+            sh 'git diff configurations/contents.json > ./diff/${platform}/contents.txt'
+          }
+        }
+        stage('Business Groups') {
+          steps {
+            sh 'git diff configurations/businessGroups.json > diff/${platform}/businessGroups.txt'
+          }
+        }
+        stage('Source Machines') {
+          steps {
+            sh 'git diff configurations/sourceMachines.json > diff/${platform}/sourceMachines.txt'
+          }
+        }
+        stage('Services') {
+          steps {
+            sh 'git diff configurations/services.json > diff/${platform}/services.txt'
+          }
+        }
+        stage('PropertyDefinition') {
+          steps {
+            sh 'git diff configurations/propertyDefinitions.json > diff/${platform}/propertyDefinitions.txt'
+          }
+        }
+        stage('Blueprints') {
+          steps {
+            sh 'git diff configurations/blueprints.json > diff/${platform}/blueprints.txt'
+          }
+        }
+        stage('Entitlements') {
+          steps {
+            sh 'git diff configurations/entitlements.json > diff/${platform}/entitlements.txt'
+          }
+        }
+        stage('Reservations') {
+          steps {
+            sh 'git diff configurations/reservations.json > diff/${platform}/reservations.txt'
+          }
+        }
       }
     }
     stage('Archive files') {
-      steps {
-        archiveArtifacts 'configurations/* '
+      parallel {
+        stage('Dev') {
+          steps {
+            archiveArtifacts(artifacts: 'diff/dev/*.txt', allowEmptyArchive: true)
+          }
+        }
+        stage('Prod') {
+          steps {
+            archiveArtifacts(artifacts: 'diff/prod/*.txt', allowEmptyArchive: true)
+          }
+        }
       }
     }
   }
