@@ -1,5 +1,5 @@
 pipeline {
-  agent node
+  agent any
   stages {
     stage('Prepare For Dev') {
       parallel {
@@ -15,7 +15,7 @@ pipeline {
         }
       }
     }
-    stage('Fetch Elements') {
+    stage('Fetch Elements from Dev') {
       parallel {
         stage('Contents') {
           steps {
@@ -120,7 +120,7 @@ pipeline {
         }
       }
     }
-    stage('Fetch Elements') {
+    stage('Fetch Elements from Prod') {
       parallel {
         stage('Contents') {
           steps {
