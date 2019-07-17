@@ -219,7 +219,7 @@ pipeline {
     }
     stage('Archive files') {
       steps {
-        archiveArtifacts './diff/*'
+        archiveArtifacts 'diff/*'
       }
     }
   }
