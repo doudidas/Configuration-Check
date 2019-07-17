@@ -1,4 +1,5 @@
 pipeline {
+  agent node
   stages {
     stage('Prepare For Dev') {
       parallel {
