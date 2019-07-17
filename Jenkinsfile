@@ -64,69 +64,72 @@ pipeline {
     }
     stage('Diff With Dev') {
       environment {
-        environment = 'dev'
+        platform = "dev"
       }
       parallel {
         stage('vRA-Content') {
           steps {
-            sh 'git diff configurations/contents.json > ./diff/dev/contents.txt'
-            archiveArtifacts 'diff/dev/contents.txt'
+            sh 'git diff configurations/contents.json > ./diff/${platform}/contents.txt'
+            archiveArtifacts 'diff/${platform}/contents.txt'
           }
         }
         stage('Business Groups') {
           steps {
-            sh 'git diff configurations/businessGroups.json > diff/dev/businessGroups.txt'
-            archiveArtifacts 'diff/dev/businessGroups.txt'
+            sh 'git diff configurations/businessGroups.json > diff/${platform}/businessGroups.txt'
+            archiveArtifacts 'diff/${platform}/businessGroups.txt'
           }
         }
         stage('Source Machines') {
           steps {
-            sh 'git diff configurations/sourceMachines.json > diff/dev/sourceMachines.txt'
-            archiveArtifacts 'diff/dev/sourceMachines.txt'
+            sh 'git diff configurations/sourceMachines.json > diff/${platform}/sourceMachines.txt'
+            archiveArtifacts 'diff/${platform}/sourceMachines.txt'
           }
         }
         stage('Services') {
           steps {
-            sh 'git diff configurations/services.json > diff/dev/services.txt'
-            archiveArtifacts 'diff/dev/services.txt'
+            sh 'git diff configurations/services.json > diff/${platform}/services.txt'
+            archiveArtifacts 'diff/${platform}/services.txt'
           }
         }
         stage('PropertyDefinition') {
           steps {
-            sh 'git diff configurations/propertyDefinitions.json > diff/dev/propertyDefinitions.txt'
-            archiveArtifacts 'diff/dev/propertyDefinitions.txt'
+            sh 'git diff configurations/propertyDefinitions.json > diff/${platform}/propertyDefinitions.txt'
+            archiveArtifacts 'diff/${platform}/propertyDefinitions.txt'
           }
         }
         stage('Blueprints') {
           steps {
-            sh 'git diff configurations/blueprints.json > diff/dev/blueprints.txt'
-            archiveArtifacts 'diff/dev/blueprints.txt'
+            sh 'git diff configurations/blueprints.json > diff/${platform}/blueprints.txt'
+            archiveArtifacts 'diff/${platform}/blueprints.txt'
           }
         }
         stage('Entitlements') {
           steps {
-            sh 'git diff configurations/entitlements.json > diff/dev/entitlements.txt'
-            archiveArtifacts 'diff/dev/entitlements.txt'
+            sh 'git diff configurations/entitlements.json > diff/${platform}/entitlements.txt'
+            archiveArtifacts 'diff/${platform}/entitlements.txt'
           }
         }
         stage('Reservations') {
           steps {
-            sh 'git diff configurations/reservations.json > diff/dev/reservations.txt'
-            archiveArtifacts 'diff/dev/reservations.txt'
+            sh 'git diff configurations/reservations.json > diff/${platform}/reservations.txt'
+            archiveArtifacts 'diff/${platform}/reservations.txt'
           }
         }
       }
     }
     stage('Prepare For Prod') {
+      environment {
+        platform = "prod"
+      }
       parallel {
         stage('Prepare workspace') {
           steps {
-            sh 'mkdir -p diff/prod'
+            sh 'mkdir -p diff/${platform}'
           }
         }
         stage('Connect to vRA') {
           steps {
-            sh 'pwsh ./connectToServer.ps1 prod'
+            sh 'pwsh ./connectToServer.ps1 ${platform}'
           }
         }
       }
@@ -176,53 +179,56 @@ pipeline {
       }
     }
     stage('Diff With Prod') {
+      environment {
+        platform = "prod"
+      }
       parallel {
         stage('vRA-Content') {
           steps {
-            sh 'git diff configurations/contents.json > diff/prod/contents.txt'
-            archiveArtifacts 'diff/prod/contents.txt'
+            sh 'git diff configurations/contents.json > ./diff/${platform}/contents.txt'
+            archiveArtifacts 'diff/${platform}/contents.txt'
           }
         }
         stage('Business Groups') {
           steps {
-            sh 'git diff configurations/businessGroups.json > diff/prod/businessGroups.txt'
-            archiveArtifacts 'diff/prod/businessGroups.txt'
+            sh 'git diff configurations/businessGroups.json > diff/${platform}/businessGroups.txt'
+            archiveArtifacts 'diff/${platform}/businessGroups.txt'
           }
         }
         stage('Source Machines') {
           steps {
-            sh 'git diff configurations/sourceMachines.json > diff/prod/sourceMachines.txt'
-            archiveArtifacts 'diff/prod/sourceMachines.txt'
+            sh 'git diff configurations/sourceMachines.json > diff/${platform}/sourceMachines.txt'
+            archiveArtifacts 'diff/${platform}/sourceMachines.txt'
           }
         }
         stage('Services') {
           steps {
-            sh 'git diff configurations/services.json > diff/prod/services.txt'
-            archiveArtifacts 'diff/prod/services.txt'
+            sh 'git diff configurations/services.json > diff/${platform}/services.txt'
+            archiveArtifacts 'diff/${platform}/services.txt'
           }
         }
         stage('PropertyDefinition') {
           steps {
-            sh 'git diff configurations/propertyDefinitions.json > diff/prod/propertyDefinitions.txt'
-            archiveArtifacts 'diff/prod/propertyDefinitions.txt'
+            sh 'git diff configurations/propertyDefinitions.json > diff/${platform}/propertyDefinitions.txt'
+            archiveArtifacts 'diff/${platform}/propertyDefinitions.txt'
           }
         }
         stage('Blueprints') {
           steps {
-            sh 'git diff configurations/blueprints.json > diff/prod/blueprints.txt'
-            archiveArtifacts 'diff/prod/blueprints.txt'
+            sh 'git diff configurations/blueprints.json > diff/${platform}/blueprints.txt'
+            archiveArtifacts 'diff/${platform}/blueprints.txt'
           }
         }
         stage('Entitlements') {
           steps {
-            sh 'git diff configurations/entitlements.json > diff/prod/entitlements.txt'
-            archiveArtifacts 'diff/prod/entitlements.txt'
+            sh 'git diff configurations/entitlements.json > diff/${platform}/entitlements.txt'
+            archiveArtifacts 'diff/${platform}/entitlements.txt'
           }
         }
         stage('Reservations') {
           steps {
-            sh 'git diff configurations/reservations.json > diff/prod/reservations.txt'
-            archiveArtifacts 'diff/prod/reservations.txt'
+            sh 'git diff configurations/reservations.json > diff/${platform}/reservations.txt'
+            archiveArtifacts 'diff/${platform}/reservations.txt'
           }
         }
       }
