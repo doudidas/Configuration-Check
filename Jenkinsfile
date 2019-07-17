@@ -177,7 +177,7 @@ pipeline {
         stage('vRA-Content') {
           steps {
             sh 'git diff configurations/contents.json > diff/prod/contents.txt'
-            archiveArtifacts 'ddiff/prod/contents.txt'
+            archiveArtifacts 'diff/prod/contents.txt'
           }
         }
         stage('Business Groups') {
