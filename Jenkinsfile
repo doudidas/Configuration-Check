@@ -218,9 +218,17 @@ pipeline {
       }
     }
     stage('Archive files') {
-      steps {
-        archiveArtifacts(artifacts: 'diff/dev/*.txt', allowEmptyArchive: true)
-        archiveArtifacts(artifacts: 'diff/prod/*.txt', allowEmptyArchive: true)
+      parallel {
+        stage('Dev') {
+          steps {
+            archiveArtifacts(artifacts: 'diff/dev/*.txt', allowEmptyArchive: true)
+          }
+        }
+        stage('Prod') {
+          steps {
+            archiveArtifacts(artifacts: 'diff/prod/*.txt', allowEmptyArchive: true)
+          }
+        }
       }
     }
   }
