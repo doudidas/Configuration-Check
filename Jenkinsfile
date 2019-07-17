@@ -208,7 +208,6 @@ pipeline {
         stage('Entitlements') {
           steps {
             sh 'git diff configurations/entitlements.json > diff/${platform}/entitlements.txt'
-            sh 'ls -R diff'
           }
         }
         stage('Reservations') {
@@ -220,7 +219,8 @@ pipeline {
     }
     stage('Archive files') {
       steps {
-        archiveArtifacts(artifacts: 'diff/*', allowEmptyArchive: true)
+        archiveArtifacts(artifacts: 'diff/dev/*.txt', allowEmptyArchive: true)
+        archiveArtifacts(artifacts: 'diff/prod/*.txt', allowEmptyArchive: true)
       }
     }
   }
