@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Prepare For Dev') {
       environment {
-        platform = "dev"
+        platform = 'dev'
       }
       parallel {
         stage('Prepare workspace') {
@@ -64,7 +64,7 @@ pipeline {
     }
     stage('Diff With Dev') {
       environment {
-        platform = "dev"
+        platform = 'dev'
       }
       parallel {
         stage('vRA-Content') {
@@ -111,7 +111,7 @@ pipeline {
     }
     stage('Prepare For Prod') {
       environment {
-        platform = "prod"
+        platform = 'prod'
       }
       parallel {
         stage('Prepare workspace') {
@@ -172,7 +172,7 @@ pipeline {
     }
     stage('Diff With Prod') {
       environment {
-        platform = "prod"
+        platform = 'prod'
       }
       parallel {
         stage('vRA-Content') {
@@ -219,8 +219,8 @@ pipeline {
     }
     stage('Archive files') {
       steps {
-        archiveArtifacts 'diff/*'
+        archiveArtifacts './diff/*'
       }
     }
-  }  
-}  
+  }
+}
